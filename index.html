@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Document</title>
+</head>
+
+<body class="h-screen">
+  <main class="w-full h-full flex flex-col md:flex-row justify-center items-center gap-10 p-4 bg-[#1e293b]">
+    <!--BASIC CARD-->
+    <div
+      class="w-full max-w-[280px] h-[440px] rounded-xl bg-[#334155] overflow-hidden border-[13px] border-[#334155] hover:border-[#7c3aed] hover:bg-[#7c3aed] duration-500 mb-6 md:mb-0">
+      <div
+        class="w-full h-2/3 flex flex-col items-center justify-center rounded-t-xl bg-[#1e293b] border-[1px] border-[#334155] relative">
+        <p class="text-[#ffffff] mt-4">BASIC</p>
+        <p class="text-4xl text-[#ffffff] mt-2">100<span class="text-5xl">GB</span></p>
+        <p class="text-[#ffffff] mt-2">$1.99/month</p>
+        <button
+          class="w-[132px] py-2 mt-4 rounded-lg text-[#ffffff] border-2 border-[#7238da] hover:bg-[#7238da] duration-500">Purchase</button>
+      </div>
+      <div class="w-full h-1/3 flex flex-col items-center justify-center gap-2 rounded-b-xl bg-[#1e293b]">
+        <p class="text-base text-[#ffffff]">100 GB storage</p>
+        <p class="text-base text-[#ffffff]">Option to add members</p>
+        <p class="text-base text-[#ffffff]">Extra member benefits</p>
+      </div>
+    </div>
+
+    <!--STANDARD CARD-->
+    <div
+      class="w-full max-w-[280px] h-[440px] rounded-xl bg-[#334155] overflow-hidden border-[13px] border-[#334155] hover:border-[#7c3aed] hover:bg-[#7c3aed] duration-500 mb-6 md:mb-0">
+      <div
+        class="w-full h-2/3 flex flex-col items-center justify-center rounded-t-xl bg-[#1e293b] border-b-[1px] border-[#334155] relative">
+        <p class="text-[#ffffff] mt-4">STANDARD</p>
+        <p class="text-4xl text-[#ffffff] mt-2">200<span class="text-5xl">GB</span></p>
+        <p class="text-[#ffffff] mt-2">$3.99/month</p>
+        <button
+          class="w-[132px] py-2 mt-4 rounded-lg text-[#ffffff] border-2 border-[#7238da] hover:bg-[#7238da] duration-500">Purchase</button>
+      </div>
+      <div class="w-full h-1/3 flex flex-col items-center justify-center gap-2 rounded-b-xl bg-[#1e293b]">
+        <p class="text-base text-[#ffffff]">200 GB storage</p>
+        <p class="text-base text-[#ffffff]">Option to add members</p>
+        <p class="text-base text-[#ffffff]">Extra member benefits</p>
+      </div>
+    </div>
+
+    <!--PREMIUM CARD-->
+    <div
+      class="w-full max-w-[280px] h-[440px] rounded-xl bg-[#334155] overflow-hidden border-[13px] border-[#334155] hover:border-[#7c3aed] hover:bg-[#7c3aed] duration-500">
+      <div
+        class="w-full h-2/3 flex flex-col items-center justify-center rounded-t-xl bg-[#1e293b] border-b-[1px] border-[#334155] relative">
+        <p class="text-[#ffffff] mt-4">PREMIUM</p>
+        <p class="text-4xl text-[#ffffff] mt-2">2<span class="text-5xl">TB</span></p>
+        <p class="text-[#ffffff] mt-2">$8.99/month</p>
+        <button
+          class="w-[132px] py-2 mt-4 rounded-lg text-[#ffffff] border-2 border-[#7238da] hover:bg-[#7238da] duration-500">Purchase</button>
+      </div>
+      <div class="w-full h-1/3 flex flex-col items-center justify-center gap-2 rounded-b-xl bg-[#1e293b]">
+        <p class="text-base text-[#ffffff]">2 TB storage</p>
+        <p class="text-base text-[#ffffff]">Option to add members</p>
+        <p class="text-base text-[#ffffff]">Extra member benefits</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
