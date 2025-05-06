@@ -11,6 +11,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Previene lo scroll orizzontale */
         }
 
         .campaign-card:hover img {
@@ -31,6 +32,20 @@
             transform: translateX(-100%);
             opacity: 0;
         }
+        
+        /* Classe personalizzata per testo gigante con migliore responsività */
+        .text-giant {
+            font-size: clamp(2.5rem, 8vw, 12rem);
+            line-height: 0.9;
+            letter-spacing: -0.02em;
+        }
+
+        /* Migliora la leggibilità su schermi piccoli */
+        @media (max-width: 640px) {
+            .text-giant {
+                line-height: 1;
+            }
+        }
     </style>
 </head>
 
@@ -40,21 +55,21 @@
         <header class="w-full">
             <nav class="w-full flex justify-between items-center">
                 <div>
-                    <h1 class="text-[#00ff97] text-xl font-medium">BING + BORG</h1>
+                    <h1 class="text-[#00ff97] text-2xl sm:text-3xl font-medium">BING + BORG</h1>
                 </div>
 
                 <!-- Menu desktop - visibile solo su schermi md e superiori -->
-                <div class="hidden md:flex gap-6 lg:gap-12 items-center">
-                    <a href="#home" class="text-[#00ff97] text-xl hover:underline">HOME</a>
-                    <a href="#works" class="text-xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
-                    <a href="#about" class="text-xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
-                    <a href="#insights" class="text-xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
-                    <a href="#contact" class="text-xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
+                <div class="hidden md:flex gap-4 lg:gap-8 items-center">
+                    <a href="#home" class="text-[#00ff97] text-xl lg:text-3xl hover:underline">HOME</a>
+                    <a href="#works" class="text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
+                    <a href="#about" class="text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
+                    <a href="#insights" class="text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
+                    <a href="#contact" class="text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
                 </div>
 
                 <!-- Hamburger menu - visibile solo su schermi piccoli -->
                 <button id="menuButton" class="md:hidden text-white focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
@@ -66,7 +81,7 @@
             <div id="mobileMenu" class="mobile-menu hidden fixed inset-0 bg-[#171717] bg-opacity-95 z-50 md:hidden">
                 <div class="flex justify-end p-4">
                     <button id="closeMenuButton" class="text-white focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M6 18L18 6M6 6l12 12" />
@@ -74,81 +89,85 @@
                     </button>
                 </div>
                 <div class="flex flex-col items-center justify-center h-full gap-8 -mt-16">
-                    <a href="#home" class="text-[#00ff97] text-2xl hover:underline">HOME</a>
-                    <a href="#works" class="text-2xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
-                    <a href="#about" class="text-2xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
+                    <a href="#home" class="text-[#00ff97] text-3xl hover:underline">HOME</a>
+                    <a href="#works" class="text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
+                    <a href="#about" class="text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
                     <a href="#insights"
-                        class="text-2xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
+                        class="text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
                     <a href="#contact"
-                        class="text-2xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
+                        class="text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
                 </div>
             </div>
 
-            <!-- Hero section -->
-            <div class="w-full flex flex-col md:flex-row justify-between mt-16 sm:mt-20 md:mt-32 mb-10 md:mb-20">
-                <div class="max-w-2xl mb-8 md:mb-0">
-                    <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-                        <span class="block text-[#00ff97] text-10xl">Beyond Boundaries:</span>
-                        <span class="block text-white text-10xl">Reimagine Your</span>
-                        <span class="block text-white text-10xl">Marketing Journey</span>
-                    </h2>
-                </div>
-                <div class="self-start md:self-end mb-4">
-                    <div class="flex space-x-8">
-                        <a href="#projects" class="flex items-center text-xl hover:text-[#00ff97] transition-colors">
-                            PROJECTS
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <a href="#insights" class="flex items-center text-xl hover:text-[#00ff97] transition-colors">
-                            INSIGHTS
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </a>
+            <!-- Hero section MODIFICATA -->
+            <div class="w-full mt-12 sm:mt-16 md:mt-24 lg:mt-32 mb-10 md:mb-20">
+                <!-- Layout migliorato per mobile -->
+                <div class="w-full flex flex-col md:flex-row justify-between">
+                    <div class="w-full mb-8 md:mb-0">
+                        <h2 class="font-bold leading-none">
+                            <span class="block text-[#00ff97] text-giant mb-4 sm:mb-6 md:mb-10">Beyond Boundaries:</span>
+                            <span class="block text-white text-giant mb-4 sm:mb-6 md:mb-10">Reimagine Your</span>
+                            <span class="block text-white text-giant">Marketing Journey</span>
+                        </h2>
+                    </div>
+                    <div class="self-start md:self-end mb-4 md:ml-8 shrink-0">
+                        <div class="flex space-x-6 sm:space-x-8">
+                            <a href="#projects" class="flex items-center text-xl sm:text-2xl md:text-3xl hover:text-[#00ff97] transition-colors">
+                                PROJECTS
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                            <a href="#insights" class="flex items-center text-xl sm:text-2xl md:text-3xl hover:text-[#00ff97] transition-colors">
+                                INSIGHTS
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
 
         <!-- Linea divisoria -->
-        <div class="w-full h-px bg-gray-800 my-10"></div>
+        <div class="w-full h-px bg-gray-800 my-8 sm:my-10"></div>
 
         <div>
-            <p class="text-2xl">LATEEST CAMPAIGNS</p>
+            <p class="text-2xl sm:text-3xl font-medium mb-6 sm:mb-10">LATEST CAMPAIGNS</p>
         </div>
 
-        <div class="grid grid-cols-3 gap-8 mt-15">
-            <div>
-                <img class="w-full rounded-xl" src="/images/84770f_4b01097f7b414f459ab8d8bd60661035~mv2.avif" alt="">
-                <p class="text-xl mt-5">Influencer Marketing</p>
+        <!-- Grid modificata con testo più grande e spaziatura corretta -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 sm:gap-x-8 md:gap-x-10 gap-y-10 sm:gap-y-12 md:gap-y-16 mt-4 sm:mt-6">
+            <div class="campaign-card">
+                <img class="w-full rounded-xl" src="/images/84770f_4b01097f7b414f459ab8d8bd60661035~mv2.avif" alt="Campaign image">
+                <p class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Influencer Marketing</p>
             </div>
-            <div>
-                <img class="w-full rounded-xl" src="/images/84770f_89313f366d354bf988a7c9d7b555fe0f~mv2.png" alt="">
-                <p class="text-xl mt-5">Influencer Marketing</p>
+            <div class="campaign-card">
+                <img class="w-full rounded-xl" src="/images/84770f_a016657c64694aeebf2be9ba4f9c17a4~mv2.avif" alt="Campaign image">
+                <p class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Influencer Marketing</p>
             </div>
-            <div>
-                <img class="w-full rounded-xl" src="/images/84770f_a016657c64694aeebf2be9ba4f9c17a4~mv2.avif" alt="">
-                <p class="text-xl mt-5">Influencer Marketing</p>
+            <div class="campaign-card">
+                <img class="w-full rounded-xl" src="/images/84770f_d9256f16534447ada1b81c8048342216~mv2.avif" alt="Campaign image">
+                <p class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Influencer Marketing</p>
             </div>
-            <div>
-                <img class="w-full rounded-xl" src="/images/84770f_d9256f16534447ada1b81c8048342216~mv2.avif" alt="">
-                <p class="text-xl mt-5">Influencer Marketing</p>
+            <div class="campaign-card">
+                <img class="w-full rounded-xl" src="/images/c837a6_26977f81e8784b4e9c638a9553a33532~mv2.avif" alt="Campaign image">
+                <p class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Influencer Marketing</p>
             </div>
-            <div>
-                <img class="w-full rounded-xl" src="/images/c837a6_26977f81e8784b4e9c638a9553a33532~mv2.avif" alt="">
-                <p class="text-xl mt-5">Influencer Marketing</p>
+            <div class="campaign-card">
+                <img class="w-full rounded-xl" src="/images/c837a6_503cbcd6f4964a90b84353d6bff12426~mv2.png" alt="Campaign image">
+                <p class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Influencer Marketing</p>
             </div>
-            <div>
-                <img class="w-full rounded-xl" src="/images/c837a6_503cbcd6f4964a90b84353d6bff12426~mv2.png" alt="">
-                <p class="text-xl mt-5">Influencer Marketing</p>
+            <div class="campaign-card">
+                <img class="w-full rounded-xl" src="/images/84770f_89313f366d354bf988a7c9d7b555fe0f~mv2.png" alt="Campaign image">
+                <p class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Influencer Marketing</p>
             </div>
         </div>
 
