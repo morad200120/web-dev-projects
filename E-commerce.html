@@ -8,12 +8,27 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>BING + BORG | Marketing Agency</title>
     <style>
+        /* Importazione dei font */
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+        :root {
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: var(--font-body);
             overflow-x: hidden;
             /* Previene lo scroll orizzontale */
+        }
+
+        h1,
+        h2,
+        h3,
+        .nav-link,
+        .text-giant {
+            font-family: var(--font-heading);
         }
 
         .campaign-card:hover img {
@@ -60,15 +75,15 @@
 
             <!-- Menu desktop - visibile solo su schermi md e superiori -->
             <div class="hidden md:flex gap-4 lg:gap-8 items-center">
-                <a href="#home" class="text-[#00ff97] text-xl lg:text-3xl hover:underline">HOME</a>
+                <a href="#home" class="nav-link text-[#00ff97] text-xl lg:text-3xl hover:underline">HOME</a>
                 <a href="#works"
-                    class="text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
+                    class="nav-link text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
                 <a href="#about"
-                    class="text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
+                    class="nav-link text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
                 <a href="#insights"
-                    class="text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
+                    class="nav-link text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
                 <a href="#contact"
-                    class="text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
+                    class="nav-link text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
             </div>
 
             <!-- Hamburger menu - visibile solo su schermi piccoli -->
@@ -93,11 +108,15 @@
                 </button>
             </div>
             <nav class="flex flex-col items-center justify-center h-full gap-8 -mt-16" aria-label="Menu mobile">
-                <a href="#home" class="text-[#00ff97] text-3xl hover:underline">HOME</a>
-                <a href="#works" class="text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
-                <a href="#about" class="text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
-                <a href="#insights" class="text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
-                <a href="#contact" class="text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
+                <a href="#home" class="nav-link text-[#00ff97] text-3xl hover:underline">HOME</a>
+                <a href="#works"
+                    class="nav-link text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
+                <a href="#about"
+                    class="nav-link text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
+                <a href="#insights"
+                    class="nav-link text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
+                <a href="#contact"
+                    class="nav-link text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
             </nav>
         </div>
     </header>
@@ -117,7 +136,7 @@
                 <div class="self-start md:self-end mb-4 md:ml-8 shrink-0">
                     <div class="flex space-x-6 sm:space-x-8">
                         <a href="#works"
-                            class="flex items-center text-xl sm:text-2xl md:text-3xl hover:text-[#00ff97] transition-colors">
+                            class="nav-link flex items-center text-xl sm:text-2xl md:text-3xl hover:text-[#00ff97] transition-colors">
                             PROJECTS
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                                 fill="currentColor" aria-hidden="true">
@@ -127,7 +146,7 @@
                             </svg>
                         </a>
                         <a href="#insights"
-                            class="flex items-center text-xl sm:text-2xl md:text-3xl hover:text-[#00ff97] transition-colors">
+                            class="nav-link flex items-center text-xl sm:text-2xl md:text-3xl hover:text-[#00ff97] transition-colors">
                             INSIGHTS
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20"
                                 fill="currentColor" aria-hidden="true">
