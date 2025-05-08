@@ -63,6 +63,36 @@
                 line-height: 1;
             }
         }
+
+        /* Nascondi il checkbox ma mantieni la funzionalità */
+        .dropdown-toggle {
+            display: none;
+        }
+        
+        /* Stile per il contenuto del dropdown */
+        .dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+            opacity: 0;
+        }
+        
+        /* Quando il checkbox è selezionato, mostra il contenuto */
+        .dropdown-toggle:checked ~ .dropdown-content {
+            max-height: 500px;
+            opacity: 1;
+            padding-bottom: 1.5rem;
+        }
+        
+        /* Cambia il simbolo quando il dropdown è aperto */
+        .dropdown-toggle:checked ~ .dropdown-label .plus-icon {
+            display: none;
+        }
+        
+        .dropdown-toggle:not(:checked) ~ .dropdown-label .minus-icon {
+            display: none;
+        }
+
     </style>
 </head>
 
@@ -233,6 +263,78 @@
         </section>
 
         <!-- Linea divisoria -->
+        <div class="w-full h-px bg-gray-800 my-8 sm:my-10"></div>
+
+        <div class="w-full">
+            <div class="w-full flex flex-col">
+                <div>
+                    <p class="text-xl mt-10">TAILORED SOLUTIONS</p>
+                </div>
+                <div>
+                    <div class="border-b-1">
+                        <input type="checkbox" id="dropdown1" class="dropdown-toggle">
+                        <label for="dropdown1" class="dropdown-label flex justify-between items-center py-6 w-full cursor-pointer">
+                          <span class="text-xl text-[#8b8b8b] font-light">SEO</span>
+                          <span class="text-lg font-light">
+                            <span class="plus-icon">+</span>
+                            <span class="minus-icon">-</span>
+                          </span>
+                        </label>
+                        <div class="dropdown-content">
+                          <p class="text-lg ml-5 leading-relaxed">
+                            Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image and give visitors a taste of the company's values and personality.
+                          </p>
+                        </div>
+                    </div>
+                    <div class="border-b-1">
+                        <input type="checkbox" id="dropdown2" class="dropdown-toggle">
+                        <label for="dropdown2" class="dropdown-label flex justify-between items-center py-6 w-full cursor-pointer">
+                          <span class="text-xl text-[#8b8b8b] font-light">PPC</span>
+                          <span class="text-lg font-light">
+                            <span class="plus-icon">+</span>
+                            <span class="minus-icon">-</span>
+                          </span>
+                        </label>
+                        <div class="dropdown-content">
+                          <p class="text-lg ml-5 leading-relaxed">
+                            Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image and give visitors a taste of the company's values and personality.
+                          </p>
+                        </div>
+                    </div>
+                    <div class="border-b-1">
+                        <input type="checkbox" id="dropdown3" class="dropdown-toggle">
+                        <label for="dropdown3" class="dropdown-label flex justify-between items-center py-6 w-full cursor-pointer">
+                          <span class="text-xl text-[#8b8b8b] font-light">Branding</span>
+                          <span class="text-lg font-light">
+                            <span class="plus-icon">+</span>
+                            <span class="minus-icon">-</span>
+                          </span>
+                        </label>
+                        <div class="dropdown-content">
+                          <p class="text-lg ml-5  leading-relaxed">
+                            Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image and give visitors a taste of the company's values and personality.
+                          </p>
+                        </div>
+                    </div>
+                    <div class="border-b-1">
+                        <input type="checkbox" id="dropdown4" class="dropdown-toggle">
+                        <label for="dropdown4" class="dropdown-label flex justify-between items-center py-6 w-full cursor-pointer">
+                          <span class="text-xl text-[#8b8b8b] font-light">Portfolio</span>
+                          <span class="text-lg font-light">
+                            <span class="plus-icon">+</span>
+                            <span class="minus-icon">-</span>
+                          </span>
+                        </label>
+                        <div class="dropdown-content">
+                          <p class="text-lg ml-5 leading-relaxed">
+                            Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image and give visitors a taste of the company's values and personality.
+                          </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="w-full h-px bg-gray-800 my-8 sm:my-10"></div>
     </main>
 
