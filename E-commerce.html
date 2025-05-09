@@ -68,7 +68,7 @@
         .dropdown-toggle {
             display: none;
         }
-        
+
         /* Stile per il contenuto del dropdown */
         .dropdown-content {
             max-height: 0;
@@ -76,45 +76,52 @@
             transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
             opacity: 0;
         }
-        
+
         /* Quando il checkbox è selezionato, mostra il contenuto */
-        .dropdown-toggle:checked ~ .dropdown-content {
+        .dropdown-toggle:checked~.dropdown-content {
             max-height: 500px;
             opacity: 1;
             padding-bottom: 1.5rem;
         }
-        
+
         /* Cambia il simbolo quando il dropdown è aperto */
-        .dropdown-toggle:checked ~ .dropdown-label .plus-icon {
-            display: none;
-        }
-        
-        .dropdown-toggle:not(:checked) ~ .dropdown-label .minus-icon {
+        .dropdown-toggle:checked~.dropdown-label .plus-icon {
             display: none;
         }
 
+        .dropdown-toggle:not(:checked)~.dropdown-label .minus-icon {
+            display: none;
+        }
     </style>
 </head>
 
 <body class="bg-[#171717] text-white">
-    <header class="w-full px-4 sm:px-6 md:px-12 py-6 md:py-10">
+    <header class="w-full px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 py-4 sm:py-5 md:py-6 lg:py-8 xl:py-10">
         <nav class="w-full flex justify-between items-center" aria-label="Navigazione principale">
             <div>
-                <a href="#home" class="text-[#00ff97] text-2xl sm:text-3xl font-medium">BING + BORG</a>
+                <a href="#home" class="text-[#00ff97] text-xl sm:text-2xl md:text-2xl lg:text-3xl font-medium">BING +
+                    BORG</a>
             </div>
 
             <!-- Menu desktop - visibile solo su schermi md e superiori -->
-            <div class="hidden md:flex gap-4 lg:gap-8 items-center">
-                <a href="#home" class="nav-link text-[#00ff97] text-xl lg:text-3xl hover:underline">HOME</a>
-                <a href="#works" class="nav-link text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
-                <a href="#about" class="nav-link text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
-                <a href="#insights" class="nav-link text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
-                <a href="#contact" class="nav-link text-xl lg:text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
+            <div class="hidden md:flex gap-3 lg:gap-6 xl:gap-8 items-center">
+                <a href="#home"
+                    class="nav-link text-[#00ff97] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline">HOME</a>
+                <a href="#works"
+                    class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
+                <a href="#about"
+                    class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
+                <a href="#insights"
+                    class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
+                <a href="#contact"
+                    class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
             </div>
 
             <!-- Hamburger menu - visibile solo su schermi piccoli -->
-            <button id="menuButton" class="md:hidden text-white focus:outline-none" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button id="menuButton" class="md:hidden text-white focus:outline-none" aria-label="Menu"
+                aria-expanded="false" aria-controls="mobileMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-7 sm:w-7" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
@@ -124,45 +131,63 @@
         <div id="mobileMenu" class="mobile-menu hidden fixed inset-0 bg-[#171717] bg-opacity-95 z-50 md:hidden">
             <div class="flex justify-end p-4">
                 <button id="closeMenuButton" class="text-white focus:outline-none" aria-label="Chiudi menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-7 sm:w-7" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
-            <nav class="flex flex-col items-center justify-center h-full gap-8 -mt-16" aria-label="Menu mobile">
-                <a href="#home" class="nav-link text-[#00ff97] text-3xl hover:underline">HOME</a>
-                <a href="#works" class="nav-link text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
-                <a href="#about" class="nav-link text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
-                <a href="#insights" class="nav-link text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
-                <a href="#contact" class="nav-link text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
+            <nav class="flex flex-col items-center justify-center h-full gap-6 sm:gap-8 -mt-16"
+                aria-label="Menu mobile">
+                <a href="#home" class="nav-link text-[#00ff97] text-2xl sm:text-3xl hover:underline">HOME</a>
+                <a href="#works"
+                    class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
+                <a href="#about"
+                    class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
+                <a href="#insights"
+                    class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
+                <a href="#contact"
+                    class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
             </nav>
         </div>
     </header>
 
-    <main class="w-full min-h-screen px-4 sm:px-6 md:px-12">
+    <main class="w-full min-h-screen px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20">
         <!-- Hero section -->
-        <section id="home" class="w-full mt-12 sm:mt-16 md:mt-24 lg:mt-32 mb-10 md:mb-20">
+        <section id="home"
+            class="w-full mt-8 sm:mt-12 md:mt-16 lg:mt-24 xl:mt-32 mb-8 sm:mb-10 md:mb-14 lg:mb-16 xl:mb-20">
             <!-- Layout migliorato per mobile -->
             <div class="w-full flex flex-col md:flex-row justify-between">
-                <div class="w-full mb-8 md:mb-0">
+                <div class="w-full mb-6 sm:mb-8 md:mb-0">
                     <h1 class="font-bold leading-none">
-                        <span class="block text-[#00ff97] text-giant mb-4 sm:mb-6 md:mb-10">Beyond Boundaries:</span>
-                        <span class="block text-white text-giant mb-4 sm:mb-6 md:mb-10">Reimagine Your</span>
+                        <span class="block text-[#00ff97] text-giant mb-2 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-10">Beyond
+                            Boundaries:</span>
+                        <span class="block text-white text-giant mb-2 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-10">Reimagine
+                            Your</span>
                         <span class="block text-white text-giant">Marketing Journey</span>
                     </h1>
                 </div>
-                <div class="self-start md:self-end mb-4 md:ml-8 shrink-0">
-                    <div class="flex space-x-6 sm:space-x-8">
-                        <a href="#works" class="nav-link flex items-center text-xl sm:text-2xl md:text-3xl hover:text-[#00ff97] transition-colors">
+                <div class="self-start md:self-end mb-4 md:ml-4 lg:ml-6 xl:ml-8 shrink-0">
+                    <div class="flex space-x-4 sm:space-x-5 md:space-x-6 lg:space-x-7 xl:space-x-8">
+                        <a href="#works"
+                            class="nav-link flex items-center text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl hover:text-[#00ff97] transition-colors">
                             PROJECTS
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 ml-1"
+                                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
                             </svg>
                         </a>
-                        <a href="#insights" class="nav-link flex items-center text-xl sm:text-2xl md:text-3xl hover:text-[#00ff97] transition-colors">
+                        <a href="#insights"
+                            class="nav-link flex items-center text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl hover:text-[#00ff97] transition-colors">
                             INSIGHTS
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 ml-1"
+                                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
                             </svg>
                         </a>
                     </div>
@@ -171,53 +196,80 @@
         </section>
 
         <!-- Linea divisoria -->
-        <div class="w-full h-px bg-gray-800 my-8 sm:my-10"></div>
+        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
 
         <!-- Sezione Latest Campaigns -->
         <section id="works" class="w-full">
-            <h2 class="text-2xl sm:text-6xl font-medium mb-6 sm:mb-10">LATEST CAMPAIGNS</h2>
+            <h2
+                class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-medium mb-4 sm:mb-6 md:mb-8 lg:mb-10">
+                LATEST CAMPAIGNS</h2>
 
             <!-- Grid modificata con testo più grande e spaziatura corretta -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 sm:gap-x-8 md:gap-x-10 gap-y-16 sm:gap-y-16 md:gap-y-16 mb-20 mt-4 sm:mt-6">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 sm:gap-x-5 md:gap-x-6 lg:gap-x-8 xl:gap-x-10 gap-y-8 sm:gap-y-10 md:gap-y-12 lg:gap-y-14 xl:gap-y-16 mb-10 sm:mb-12 md:mb-16 lg:mb-20 mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-6">
                 <article class="campaign-card">
-                    <img class="w-full rounded-xl" src="/images/E-commerce-images/84770f_4b01097f7b414f459ab8d8bd60661035~mv2.avif" alt="Influencer Marketing campaign example">
-                    <h3 class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Influencer Marketing</h3>
+                    <img class="w-full rounded-lg sm:rounded-xl"
+                        src="/images/E-commerce-images/84770f_4b01097f7b414f459ab8d8bd60661035~mv2.avif"
+                        alt="Influencer Marketing campaign example">
+                    <h3
+                        class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
+                        Influencer Marketing</h3>
                 </article>
                 <article class="campaign-card">
-                    <img class="w-full rounded-xl" src="/images/E-commerce-images/84770f_a016657c64694aeebf2be9ba4f9c17a4~mv2.avif" alt="Public Advertising campaign example">
-                    <h3 class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Public Advertising</h3>
+                    <img class="w-full rounded-lg sm:rounded-xl"
+                        src="/images/E-commerce-images/84770f_a016657c64694aeebf2be9ba4f9c17a4~mv2.avif"
+                        alt="Public Advertising campaign example">
+                    <h3
+                        class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
+                        Public Advertising</h3>
                 </article>
                 <article class="campaign-card">
-                    <img class="w-full rounded-xl" src="/images/E-commerce-images/84770f_d9256f16534447ada1b81c8048342216~mv2.avif" alt="Product Photography example">
-                    <h3 class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Product Photography</h3>
+                    <img class="w-full rounded-lg sm:rounded-xl"
+                        src="/images/E-commerce-images/84770f_d9256f16534447ada1b81c8048342216~mv2.avif"
+                        alt="Product Photography example">
+                    <h3
+                        class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
+                        Product Photography</h3>
                 </article>
                 <article class="campaign-card">
-                    <img class="w-full rounded-xl" src="/images/E-commerce-images/c837a6_26977f81e8784b4e9c638a9553a33532~mv2.avif" alt="Search Engine Marketing campaign example">
-                    <h3 class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Search Engine Marketing</h3>
+                    <img class="w-full rounded-lg sm:rounded-xl"
+                        src="/images/E-commerce-images/c837a6_26977f81e8784b4e9c638a9553a33532~mv2.avif"
+                        alt="Search Engine Marketing campaign example">
+                    <h3
+                        class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
+                        Search Engine Marketing</h3>
                 </article>
                 <article class="campaign-card">
-                    <img class="w-full rounded-xl" src="/images/E-commerce-images/c837a6_503cbcd6f4964a90b84353d6bff12426~mv2.png" alt="Brand Asset Development example">
-                    <h3 class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Brand Asset Development</h3>
+                    <img class="w-full rounded-lg sm:rounded-xl"
+                        src="/images/E-commerce-images/c837a6_503cbcd6f4964a90b84353d6bff12426~mv2.png"
+                        alt="Brand Asset Development example">
+                    <h3
+                        class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
+                        Brand Asset Development</h3>
                 </article>
                 <article class="campaign-card">
-                    <img class="w-full rounded-xl" src="/images/E-commerce-images/84770f_89313f366d354bf988a7c9d7b555fe0f~mv2.png" alt="Digital Content Development example">
-                    <h3 class="text-2xl sm:text-3xl md:text-4xl mt-4 sm:mt-7 font-light">Digital Content Development</h3>
+                    <img class="w-full rounded-lg sm:rounded-xl"
+                        src="/images/E-commerce-images/84770f_89313f366d354bf988a7c9d7b555fe0f~mv2.png"
+                        alt="Digital Content Development example">
+                    <h3
+                        class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
+                        Digital Content Development</h3>
                 </article>
             </div>
         </section>
 
         <!-- Linea divisoria -->
-        <div class="w-full h-px bg-gray-800 my-8 sm:my-10"></div>
+        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
 
         <!-- Prima sezione About Us -->
-        <section id="about" class="w-full mt-20">
-            <div class="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20">
+        <section id="about" class="w-full mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">
+            <div class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20">
                 <div class="w-full lg:w-1/3">
-                    <h2 class="text-xl lg:text-7xl">LEARN ABOUT US</h2>
+                    <h2 class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-7xl">LEARN ABOUT US</h2>
                 </div>
-                <div class="flex flex-col gap-10 lg:gap-20 w-full lg:w-2/3">
-                    <h3 class="text-xl lg:text-5xl text-[#00ff97]">Our Journey</h3>
-                    <p class="text-lg lg:text-4xl lg:leading-relaxed">
+                <div class="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20 w-full lg:w-2/3">
+                    <h3 class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl text-[#00ff97]">Our Journey</h3>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed">
                         This is a space to share more about the business: who's behind it,
                         what it does and what this site has to offer. It's an opportunity to tell
                         the story behind the business or
@@ -225,7 +277,7 @@
                         history or highlight a particular feature that sets it apart from
                         competitors.
                     </p>
-                    <p class="text-lg lg:text-4xl lg:leading-relaxed">
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed">
                         Let the writing speak for itself. Keep a consistent tone and voice
                         throughout the website to stay true to the brand image and give
                         visitors a taste of the company's values and personality.
@@ -235,17 +287,18 @@
         </section>
 
         <!-- Linea divisoria -->
-        <div class="w-full h-px bg-gray-800 my-8 sm:my-10"></div>
+        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
 
         <!-- Seconda sezione About Us (Purpose) -->
-        <section id="purpose" class="w-full mt-20">
-            <div class="flex flex-col lg:flex-row justify-between gap-10 lg:gap-20">
+        <section id="purpose" class="w-full mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">
+            <div class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20">
                 <div class="w-full lg:w-1/3">
-                    <h2 class="text-xl lg:text-7xl">OUR PURPOSE</h2>
+                    <h2 class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-7xl">OUR PURPOSE</h2>
                 </div>
-                <div class="flex flex-col gap-10 lg:gap-20 w-full lg:w-2/3">
-                    <h3 class="text-xl lg:text-5xl text-[#00ff97]">Passion for Success</h3>
-                    <p class="text-lg lg:text-4xl lg:leading-relaxed">
+                <div class="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20 w-full lg:w-2/3">
+                    <h3 class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl text-[#00ff97]">Passion for
+                        Success</h3>
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed">
                         This is a space to share more about the business: who's behind it,
                         what it does and what this site has to offer. It's an opportunity to tell
                         the story behind the business or
@@ -253,7 +306,7 @@
                         history or highlight a particular feature that sets it apart from
                         competitors.
                     </p>
-                    <p class="text-lg lg:text-4xl lg:leading-relaxed">
+                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed">
                         Let the writing speak for itself. Keep a consistent tone and voice
                         throughout the website to stay true to the brand image and give
                         visitors a taste of the company's values and personality.
@@ -263,87 +316,105 @@
         </section>
 
         <!-- Linea divisoria -->
-        <div class="w-full h-px bg-gray-800 my-8 sm:my-10"></div>
+        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
 
         <div class="w-full">
-            <div class="w-full flex flex-col">
-                <div>
-                    <p class="text-xl mt-10">TAILORED SOLUTIONS</p>
+            <div class="w-full flex flex-col justify-between lg:gap-10 xl:gap-20 lg:flex-row">
+                <div class="w-full">
+                    <p class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl mt-6 sm:mt-8 md:mt-10">TAILORED
+                        SOLUTIONS</p>
                 </div>
-                <div>
-                    <div class="border-b-1">
+                <div class="w-full">
+                    <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
                         <input type="checkbox" id="dropdown1" class="dropdown-toggle">
-                        <label for="dropdown1" class="dropdown-label flex justify-between items-center py-6 w-full cursor-pointer">
-                          <span class="text-xl text-[#8b8b8b] font-light">SEO</span>
-                          <span class="text-lg font-light">
-                            <span class="plus-icon">+</span>
-                            <span class="minus-icon">-</span>
-                          </span>
+                        <label for="dropdown1"
+                            class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer">
+                            <span
+                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light">SEO</span>
+                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light">
+                                <span class="plus-icon">+</span>
+                                <span class="minus-icon">-</span>
+                            </span>
                         </label>
                         <div class="dropdown-content">
-                          <p class="text-lg ml-5 leading-relaxed">
-                            Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image and give visitors a taste of the company's values and personality.
-                          </p>
+                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed">
+                                Let the writing speak for itself. Keep a consistent tone and voice throughout the
+                                website to stay true to the brand image and give visitors a taste of the company's
+                                values and personality.
+                            </p>
                         </div>
                     </div>
-                    <div class="border-b-1">
+                    <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
                         <input type="checkbox" id="dropdown2" class="dropdown-toggle">
-                        <label for="dropdown2" class="dropdown-label flex justify-between items-center py-6 w-full cursor-pointer">
-                          <span class="text-xl text-[#8b8b8b] font-light">PPC</span>
-                          <span class="text-lg font-light">
-                            <span class="plus-icon">+</span>
-                            <span class="minus-icon">-</span>
-                          </span>
+                        <label for="dropdown2"
+                            class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer">
+                            <span
+                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light">PPC</span>
+                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light">
+                                <span class="plus-icon">+</span>
+                                <span class="minus-icon">-</span>
+                            </span>
                         </label>
                         <div class="dropdown-content">
-                          <p class="text-lg ml-5 leading-relaxed">
-                            Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image and give visitors a taste of the company's values and personality.
-                          </p>
+                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed">
+                                Let the writing speak for itself. Keep a consistent tone and voice throughout the
+                                website to stay true to the brand image and give visitors a taste of the company's
+                                values and personality.
+                            </p>
                         </div>
                     </div>
-                    <div class="border-b-1">
+                    <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
                         <input type="checkbox" id="dropdown3" class="dropdown-toggle">
-                        <label for="dropdown3" class="dropdown-label flex justify-between items-center py-6 w-full cursor-pointer">
-                          <span class="text-xl text-[#8b8b8b] font-light">Branding</span>
-                          <span class="text-lg font-light">
-                            <span class="plus-icon">+</span>
-                            <span class="minus-icon">-</span>
-                          </span>
+                        <label for="dropdown3"
+                            class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer">
+                            <span
+                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light">Branding</span>
+                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light">
+                                <span class="plus-icon">+</span>
+                                <span class="minus-icon">-</span>
+                            </span>
                         </label>
                         <div class="dropdown-content">
-                          <p class="text-lg ml-5  leading-relaxed">
-                            Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image and give visitors a taste of the company's values and personality.
-                          </p>
+                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed">
+                                Let the writing speak for itself. Keep a consistent tone and voice throughout the
+                                website to stay true to the brand image and give visitors a taste of the company's
+                                values and personality.
+                            </p>
                         </div>
                     </div>
-                    <div class="border-b-1">
+                    <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
                         <input type="checkbox" id="dropdown4" class="dropdown-toggle">
-                        <label for="dropdown4" class="dropdown-label flex justify-between items-center py-6 w-full cursor-pointer">
-                          <span class="text-xl text-[#8b8b8b] font-light">Portfolio</span>
-                          <span class="text-lg font-light">
-                            <span class="plus-icon">+</span>
-                            <span class="minus-icon">-</span>
-                          </span>
+                        <label for="dropdown4"
+                            class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer">
+                            <span
+                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light">Portfolio</span>
+                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light">
+                                <span class="plus-icon">+</span>
+                                <span class="minus-icon">-</span>
+                            </span>
                         </label>
                         <div class="dropdown-content">
-                          <p class="text-lg ml-5 leading-relaxed">
-                            Let the writing speak for itself. Keep a consistent tone and voice throughout the website to stay true to the brand image and give visitors a taste of the company's values and personality.
-                          </p>
+                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed">
+                                Let the writing speak for itself. Keep a consistent tone and voice throughout the
+                                website to stay true to the brand image and give visitors a taste of the company's
+                                values and personality.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="w-full h-px bg-gray-800 my-8 sm:my-10"></div>
+        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
     </main>
 
-    <footer class="w-full px-4 sm:px-6 md:px-12 py-8 bg-[#111111]">
+    <footer class="w-full px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 py-6 sm:py-7 md:py-8 lg:py-10 bg-[#111111]">
         <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm mb-4 md:mb-0">Lorem ipsum dolor sit amet consectetur adipi</p>
-            <div class="flex gap-6">
-                <a href="#" class="text-sm hover:text-[#00ff97]">Privacy Policy</a>
-                <a href="#" class="text-sm hover:text-[#00ff97]">Terms of Service</a>
+            <p class="text-xs sm:text-sm md:text-base mb-3 sm:mb-4 md:mb-0">Lorem ipsum dolor sit amet consectetur adipi
+            </p>
+            <div class="flex gap-4 sm:gap-5 md:gap-6">
+                <a href="#" class="text-xs sm:text-sm md:text-base hover:text-[#00ff97]">Privacy Policy</a>
+                <a href="#" class="text-xs sm:text-sm md:text-base hover:text-[#00ff97]">Terms of Service</a>
             </div>
         </div>
     </footer>
