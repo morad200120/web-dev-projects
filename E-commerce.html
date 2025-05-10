@@ -92,6 +92,58 @@
         .dropdown-toggle:not(:checked)~.dropdown-label .minus-icon {
             display: none;
         }
+
+        /* Stile per la sezione delle carte scorrevoli */
+        .cards-container {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        .cards-container::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+
+        .card-item {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        @media (hover: hover) {
+            .card-item:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Effetto di scorrimento fluido */
+        .snap-x {
+            scroll-snap-type: x mandatory;
+        }
+
+        .snap-center {
+            scroll-snap-align: center;
+        }
+
+        /* Indicatori di scorrimento */
+        .scroll-indicator {
+            height: 3px;
+            width: 40px;
+            background-color: #333;
+            border-radius: 999px;
+            transition: background-color 0.3s ease;
+        }
+
+        .scroll-indicator.active {
+            background-color: #00ff97;
+        }
+
+        /* Nascondi gli indicatori su schermi grandi */
+        @media (min-width: 1280px) {
+            .indicators-container {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -318,10 +370,86 @@
             </div>
         </section>
 
+
         <!-- Linea divisoria -->
         <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
 
-        <div class="w-full">
+        <!-- Sezione "WHAT WE STAND FOR" migliorata -->
+        <section class="w-full my-10 sm:my-12 md:my-16 lg:my-20 xl:my-24">
+            <div class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+                <h2 class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-7xl">WHAT WE STAND FOR</h2>
+
+                <!-- Contenitore scorrevole migliorato -->
+                <div class="w-full relative">
+                    <div
+                        class="cards-container relative flex gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 pb-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
+                        <div
+                            class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1">
+                            <p class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4">
+                                01</p>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+                                Creativity</h3>
+                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">We think outside the box
+                                to deliver innovative solutions that make your brand stand out.</p>
+                        </div>
+
+                        <div
+                            class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1">
+                            <p class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4">
+                                02</p>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+                                Integrity</h3>
+                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">We build trust through
+                                transparency, honesty, and ethical business practices.</p>
+                        </div>
+
+                        <div
+                            class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1">
+                            <p class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4">
+                                03</p>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+                                Adaptability</h3>
+                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">We evolve with the market,
+                                embracing change and new technologies to keep you ahead.</p>
+                        </div>
+
+                        <div
+                            class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1">
+                            <p class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4">
+                                04</p>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+                                Collaboration</h3>
+                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">We work closely with you,
+                                ensuring your vision is at the heart of everything we create.</p>
+                        </div>
+
+                        <div
+                            class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1">
+                            <p class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4">
+                                05</p>
+                            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+                                Result-Driven</h3>
+                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">We focus on delivering
+                                measurable outcomes that drive growth and success for your business.</p>
+                        </div>
+                    </div>
+
+                    <!-- Indicatori di scorrimento -->
+                    <div class="indicators-container flex justify-center mt-6 sm:mt-8 md:mt-10 gap-2">
+                        <span class="scroll-indicator active" data-index="0"></span>
+                        <span class="scroll-indicator" data-index="1"></span>
+                        <span class="scroll-indicator" data-index="2"></span>
+                        <span class="scroll-indicator" data-index="3"></span>
+                        <span class="scroll-indicator" data-index="4"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Linea divisoria -->
+        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
+
+        <section class="w-full">
             <div class="w-full flex flex-col justify-between lg:gap-10 xl:gap-20 lg:flex-row">
                 <div class="w-full">
                     <p class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl mt-6 sm:mt-8 md:mt-10">TAILORED
@@ -406,7 +534,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
     </main>
@@ -449,6 +577,62 @@
             });
         });
     </script>
+
+    <!-- Script per gli indicatori di scorrimento -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card-item');
+            const indicators = document.querySelectorAll('.scroll-indicator');
+            const cardsContainer = document.querySelector('.cards-container');
+        
+        // Configurazione dell'Intersection Observer
+        const options = {
+            root: cardsContainer,
+            rootMargin: '0px',
+            threshold: 0.6 // La carta è considerata visibile quando è visibile al 60%
+        };
+        
+        // Callback per l'Intersection Observer
+        const callback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Trova l'indice della carta visibile
+                    const visibleCard = entry.target;
+                    const visibleIndex = Array.from(cards).indexOf(visibleCard);
+                    
+                    // Aggiorna gli indicatori
+                    indicators.forEach((indicator, index) => {
+                        if (index === visibleIndex) {
+                            indicator.classList.add('active');
+                        } else {
+                            indicator.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        };
+        
+        // Crea l'observer
+        const observer = new IntersectionObserver(callback, options);
+        
+        // Osserva tutte le carte
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+        
+        // Gestione del click sugli indicatori
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                // Scorri alla carta corrispondente
+                cards[index].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            });
+        });
+    });
+</script>
 </body>
 
 </html>
