@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--PROBLEMA RISOLTO: SCROLL ORIZZONTALE INDESIDERATO E SCROLL VERTICALE BLOCCATO-->
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+    <title>BING + BORG | Creative Agency</title>
     <style>
         /* Importazione dei font */
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
@@ -44,12 +43,74 @@
             transform: translateX(-100%);
             opacity: 0;
         }
+
+        /* Responsive image layout */
+        .img-container-main {
+            width: 100%;
+            height: 0;
+            padding-bottom: 75%;
+            /* 4:3 aspect ratio */
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .img-container {
+            width: 100%;
+            height: 0;
+            padding-bottom: 66.67%;
+            /* 2:3 aspect ratio */
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+
+        .img-container img,
+        .img-container-main img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Responsive text sizing */
+        @media (max-width: 640px) {
+            .project-title {
+                font-size: 2.5rem;
+                line-height: 1.1;
+            }
+
+            .project-info {
+                font-size: 1.5rem;
+                line-height: 1.2;
+            }
+
+            .project-description {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
+
+        /* Footer spacing */
+        footer {
+            margin-top: auto;
+            padding-bottom: 2rem;
+        }
+
+        /* Button hover effects */
+        .nav-button:hover {
+            background-color: rgba(0, 255, 151, 0.1);
+            transition: background-color 0.3s ease;
+        }
     </style>
 </head>
 
 <body class="bg-[#171717]">
     <header
-        class="w-full overflow-x-hidden px-5 sm:px-6 md:px-12 lg:px-16 xl:px-20 py-4 sm:py-5 md:py-6 lg:py-8 xl:py-10">
+        class="w-full fixed top-0 left-0 right-0 z-40 bg-[#171717] overflow-x-hidden px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 py-4 sm:py-5 md:py-6 lg:py-8">
         <nav class="w-full flex justify-between items-center" aria-label="Navigazione principale">
             <div>
                 <a href="#home" class="text-[#00ff97] text-xl sm:text-2xl md:text-2xl lg:text-3xl font-medium">BING +
@@ -106,78 +167,103 @@
         </div>
     </header>
 
-
-    <main class="flex flex-col px-5 pt-40 gap-10 pb-10">
-        <div class="w-full">
-            <div class="w-full flex flex-col gap-6">
-                <div class="w-full flex flex-col gap-8">
-                    <p class="text-white text-5xl font-medium">
+    <main
+        class="flex flex-col px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 pt-28 sm:pt-32 md:pt-36 lg:pt-40 gap-8 sm:gap-10 md:gap-12 lg:gap-16 pb-10">
+        <section class="project-intro">
+            <div class="w-full flex flex-col gap-6 md:gap-9 lg:gap-14 xl:gap-16">
+                <div
+                    class="w-full flex flex-col xl:flex-row xl:justify-between xl:items-start gap-8 md:gap-10 lg:gap-12">
+                    <h1
+                        class="project-title text-white text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-medium leading-tight">
                         Public<br>
                         Advertising
-                    </p>
-                    <div class="flex flex-col gap-3">
-                        <div class="flex flex-col gap-1">
-                            <p class="text-[#00ff97] text-3xl">Project Type</p>
-                            <p class="text-white text-3xl">Photography</p>
+                    </h1>
+                    <div class="flex flex-col gap-6 md:gap-8 lg:gap-10">
+                        <div class="w-full flex flex-col gap-1">
+                            <h2
+                                class="project-info text-[#00ff97] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                                Project Type</h2>
+                            <p class="project-info text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                                Photography</p>
                         </div>
-                        <div class="flex flex-col gap-1">
-                            <p class="text-[#00ff97] text-3xl">Date</p>
-                            <p class="text-white text-3xl">2025</p>
+                        <div class="w-full flex flex-col gap-1">
+                            <h2
+                                class="project-info text-[#00ff97] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                                Date</h2>
+                            <p class="project-info text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+                                2025</p>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <p class="text-white text-lg">
-                        This is where the project<br>
-                        description goes. Give an overview
-                        or go in depth - what it's all about,
-                        what inspired you, how you created
-                        it, or anything else you'd like
-                        visitors to know. To add Project
-                        descriptions, go to Manage
-                        Projects.
+                <div class="max-w-4xl">
+                    <p
+                        class="project-description text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl leading-relaxed">
+                        This is where the project description goes. Give an overview
+                        or go in depth - what it's all about, what inspired you, how you created
+                        it, or anything else you'd like visitors to know. To add Project
+                        descriptions, go to Manage Projects.
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
 
+        <section class="project-gallery" aria-label="Galleria del progetto">
+            <figure class="img-container-main">
+                <img src="/images/E-commerce-images/84770f_a016657c64694aeebf2be9ba4f9c17a4~mv2.avif"
+                    alt="Immagine principale del progetto" loading="lazy">
+                <figcaption class="sr-only">Immagine principale del progetto di advertising pubblico</figcaption>
+            </figure>
 
-        <div class="">
-            <div class="grid grid-cols-1 gap-6">
-                <img class="w-full h-55 object-cover rounded-2xl"
-                    src="/images/E-commerce-images/84770f_a016657c64694aeebf2be9ba4f9c17a4~mv2.avif" alt="">
-                <img class="w-full h-55 object-cover rounded-2xl"
-                    src="/images/E-commerce-images/84770f_b4d9a6c537b74c109c6271bb4f4e5bb8~mv2.avif" alt="">
-                <img class="w-full h-55 object-cover rounded-2xl"
-                    src="/images/E-commerce-images/84770f_221761b8231842f2b952a2a5e75a8527~mv2.avif" alt="">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                <figure class="img-container">
+                    <img src="/images/E-commerce-images/84770f_b4d9a6c537b74c109c6271bb4f4e5bb8~mv2.avif"
+                        alt="Seconda immagine del progetto" loading="lazy">
+                    <figcaption class="sr-only">Seconda immagine del progetto di advertising pubblico</figcaption>
+                </figure>
+                <figure class="img-container">
+                    <img src="/images/E-commerce-images/84770f_221761b8231842f2b952a2a5e75a8527~mv2.avif"
+                        alt="Terza immagine del progetto" loading="lazy">
+                    <figcaption class="sr-only">Terza immagine del progetto di advertising pubblico</figcaption>
+                </figure>
             </div>
-        </div>
+        </section>
 
-        <div>
+        <nav class="project-navigation w-full mt-4 sm:mt-6 md:mt-8 lg:mt-10" aria-label="Navigazione progetti">
             <div class="w-full flex justify-between">
-                <button class="text-white text-sm w-1/2 px-2 py-3" type="submit">PREVIOUS PROJECT</button>
-                <button class="text-white text-sm w-1/2 px-2 py-3" type="submit">NEXT PROJECT</button>
+                <a href="#prev-project"
+                    class="nav-button text-white text-sm sm:text-base md:text-lg lg:text-xl w-1/2 px-2 py-3 rounded-md hover:bg-opacity-10 transition-all flex items-center">
+                    <span aria-hidden="true">←</span>
+                    <span class="ml-2">PROGETTO PRECEDENTE</span>
+                </a>
+                <a href="#next-project"
+                    class="nav-button text-white text-sm sm:text-base md:text-lg lg:text-xl w-1/2 px-2 py-3 rounded-md hover:bg-opacity-10 transition-all flex items-center justify-end">
+                    <span class="mr-2">PROGETTO SUCCESSIVO</span>
+                    <span aria-hidden="true">→</span>
+                </a>
             </div>
-        </div>
-
+        </nav>
     </main>
 
-    <footer class="w-full bg-white border-t-8 border-t-[#00ff97] pt-16 pb-30">
-        <div class="w-full text-center px-5 flex flex-col gap-6">
-            <h2 class="text-5xl md:text-7xl font-bold">
-                Connect<br>
+    <footer
+        class="w-full bg-white border-t-8 border-t-[#00ff97] pt-10 sm:pt-12 md:pt-14 lg:pt-16 pb-8 sm:pb-10 md:pb-12 lg:pb-16">
+        <div class="w-full text-center px-4 sm:px-6 md:px-8 lg:px-10 flex flex-col gap-6 sm:gap-8 md:gap-10">
+            <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
+                Connect<br class="sm:hidden">
                 with Us
             </h2>
-            <div class="flex flex-col items-center justify-center gap-4 max-w-md mx-auto w-full">
-                <label for="email" class="sr-only">Email</label>
-                <input type="email" name="email" id="email" placeholder="Your email address"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-md">
-                <button type="submit" class="w-full bg-[#171717] text-white py-3 px-6 rounded-md">
+            <form class="flex flex-col items-center justify-center gap-4 max-w-md mx-auto w-full">
+                <div class="w-full">
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Your email address"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-md text-base" required>
+                </div>
+                <button type="submit"
+                    class="w-full bg-[#171717] text-white py-3 px-6 rounded-md text-base hover:bg-black transition-colors">
                     Subscribe
                 </button>
-            </div>
-            <div class="mt-8 text-gray-600">
-                <p>© 2025 BING + BORG. All rights reserved.</p>
+            </form>
+            <div class="mt-4 sm:mt-6 md:mt-8 text-gray-600">
+                <p class="text-sm sm:text-base">© 2025 BING + BORG. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -190,11 +276,13 @@
             menuButton.addEventListener('click', function () {
                 mobileMenu.classList.remove('hidden');
                 menuButton.setAttribute('aria-expanded', 'true');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
             });
 
             closeMenuButton.addEventListener('click', function () {
                 mobileMenu.classList.add('hidden');
                 menuButton.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = ''; // Restore scrolling
             });
 
             // Chiudi il menu quando si clicca su un link
@@ -203,7 +291,17 @@
                 link.addEventListener('click', function () {
                     mobileMenu.classList.add('hidden');
                     menuButton.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = ''; // Restore scrolling
                 });
+            });
+
+            // Gestione del ridimensionamento della finestra
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 768) { // 768px è il breakpoint md di Tailwind
+                    mobileMenu.classList.add('hidden');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
             });
         });
     </script>
