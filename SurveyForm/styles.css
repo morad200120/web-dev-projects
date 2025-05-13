@@ -1,66 +1,66 @@
 :root {
-    --primary-color: #3a86ff;
-    --secondary-color: #8338ec;
-    --background-color: #f8f9fa;
-    --text-color: #212529;
-    --border-color: #dee2e6;
-    --success-color: #38b000;
-    --error-color: #d90429;
+  --primary-color: #3a86ff;
+  --secondary-color: #8338ec;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --border-color: #dee2e6;
+  --success-color: #38b000;
+  --error-color: #d90429;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 20px;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 #title {
-    text-align: center;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    font-size: 2.5rem;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 2.5rem;
 }
 
 #description {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #6c757d;
-    font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #6c757d;
+  font-size: 1.2rem;
 }
 
 #survey-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 label {
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--text-color);
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-color);
 }
 
 input[type="text"],
@@ -68,11 +68,11 @@ input[type="email"],
 input[type="number"],
 select,
 textarea {
-    padding: 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
 }
 
 input[type="text"]:focus,
@@ -80,57 +80,57 @@ input[type="email"]:focus,
 input[type="number"]:focus,
 select:focus,
 textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
 }
 
 .radio-group,
 .checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
 .radio-option,
 .checkbox-option {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 textarea {
-    min-height: 120px;
-    resize: vertical;
+  min-height: 120px;
+  resize: vertical;
 }
 
 #submit {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
 }
 
 #submit:hover {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 @media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-    
-    #title {
-        font-size: 2rem;
-    }
-    
-    #description {
-        font-size: 1rem;
-    }
+  .container {
+    padding: 20px;
+  }
+
+  #title {
+    font-size: 2rem;
+  }
+
+  #description {
+    font-size: 1rem;
+  }
 }
