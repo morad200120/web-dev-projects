@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Documentazione JavaScript</title>
+</head>
+
+<body>
+    <button class="menu-toggle" id="menuToggle">☰ Menu</button>
+
+    <nav id="navbar">
+        <header>JS Documentation</header>
+        <a class="nav-link" href="#Introduzione">Introduzione</a>
+        <a class="nav-link" href="#Sintassi_base">Sintassi base</a>
+        <a class="nav-link" href="#Strutture_di_controllo">Strutture di controllo</a>
+        <a class="nav-link" href="#Gestione_degli_errori">Gestione degli errori</a>
+        <a class="nav-link" href="#DOM_Manipulation">DOM Manipulation</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduzione">
+            <header>
+                <h2>Introduzione</h2>
+            </header>
+            <p>Testo introduttivo. JavaScript è un linguaggio di programmazione versatile e potente che consente di
+                aggiungere interattività alle pagine web.</p>
+            <p>Descrizione generale. Creato originariamente per "rendere vive" le pagine web, oggi JavaScript è
+                utilizzato sia sul frontend che sul backend.</p>
+            <ul>
+                <li>Concetto 1: JavaScript è un linguaggio interpretato</li>
+                <li>Concetto 2: È orientato agli oggetti e basato su prototipi</li>
+                <li>Concetto 3: È un linguaggio di scripting lato client</li>
+            </ul>
+            <code>console.log("Hello World");</code>
+            <p>Spiegazione aggiuntiva. Il codice sopra mostra come visualizzare un messaggio nella console del browser,
+                uno strumento fondamentale per il debugging.</p>
+        </section>
+
+        <section class="main-section" id="Sintassi_base">
+            <header>
+                <h2>Sintassi base</h2>
+            </header>
+            <p>Spiegazione della sintassi. JavaScript utilizza una sintassi simile a C, con punti e virgola alla fine
+                delle istruzioni e parentesi graffe per delimitare i blocchi di codice.</p>
+            <p>Esempi di codice. Di seguito alcuni esempi di sintassi base in JavaScript.</p>
+            <ul>
+                <li>Variabili: Dichiarate con let, const o var</li>
+                <li>Funzioni: Blocchi di codice riutilizzabili</li>
+                <li>Oggetti: Collezioni di proprietà e metodi</li>
+            </ul>
+            <code>function example() {
+    let x = 10;
+    const y = 20;
+    return x + y;
+}</code>
+            <p>Note importanti. È consigliabile utilizzare let e const invece di var per la dichiarazione delle
+                variabili.</p>
+        </section>
+
+        <section class="main-section" id="Strutture_di_controllo">
+            <header>
+                <h2>Strutture di controllo</h2>
+            </header>
+            <p>If/else statements. Permettono di eseguire blocchi di codice in base a condizioni specifiche.</p>
+            <p>Loop e iterazioni. JavaScript offre diversi tipi di cicli per iterare attraverso dati e ripetere
+                operazioni.</p>
+            <ul>
+                <li>For loop: Utilizzato quando si conosce il numero di iterazioni</li>
+                <li>While loop: Esegue il codice finché una condizione è vera</li>
+                <li>Switch case: Alternativa a molteplici if/else</li>
+            </ul>
+            <code>for(let i = 0; i < 5; i++) {
+    console.log("Iterazione numero: " + i);
+}</code>
+            <p>Best practices. Evitare cicli infiniti e utilizzare la struttura di controllo più appropriata per ogni
+                situazione.</p>
+        </section>
+
+        <section class="main-section" id="Gestione_degli_errori">
+            <header>
+                <h2>Gestione degli errori</h2>
+            </header>
+            <p>Try/catch blocks. Permettono di gestire gli errori in modo elegante senza interrompere l'esecuzione del
+                programma.</p>
+            <p>Errori comuni. JavaScript può generare diversi tipi di errori durante l'esecuzione del codice.</p>
+            <ul>
+                <li>TypeError: Si verifica quando un'operazione non può essere eseguita</li>
+                <li>ReferenceError: Si verifica quando si fa riferimento a una variabile non dichiarata</li>
+                <li>SyntaxError: Si verifica quando c'è un errore nella sintassi del codice</li>
+            </ul>
+            <code>try {
+    // Operazione rischiosa
+    riskyOperation();
+} catch(e) {
+    console.error("Si è verificato un errore:", e.message);
+}</code>
+            <p>Debugging tips. Utilizzare console.log, debugger e gli strumenti di sviluppo del browser per identificare
+                e risolvere gli errori.</p>
+        </section>
+
+        <section class="main-section" id="DOM_Manipulation">
+            <header>
+                <h2>DOM Manipulation</h2>
+            </header>
+            <p>Selezionare elementi. JavaScript permette di selezionare elementi HTML per modificarli dinamicamente.</p>
+            <p>Modificare contenuti. Una volta selezionati, gli elementi possono essere modificati in vari modi.</p>
+            <ul>
+                <li>getElementById: Seleziona un elemento tramite il suo ID</li>
+                <li>querySelector: Seleziona elementi usando selettori CSS</li>
+                <li>innerHTML: Modifica il contenuto HTML di un elemento</li>
+            </ul>
+            <code>const element = document.querySelector(".class");
+element.innerHTML = "Nuovo contenuto";
+element.style.color = "blue";</code>
+            <p>Considerazioni prestazionali. Minimizzare le manipolazioni del DOM e raggruppare le modifiche per
+                migliorare le prestazioni.</p>
+        </section>
+    </main>
+
+    <script>
+        // Script per la navigazione e la responsività
+        document.addEventListener('DOMContentLoaded', function () {
+            // Gestione del menu mobile
+            const menuToggle = document.getElementById('menuToggle');
+            const navbar = document.getElementById('navbar');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            menuToggle.addEventListener('click', function () {
+                navbar.classList.toggle('active');
+            });
+
+            // Chiudi il menu quando si clicca su un link (solo su mobile)
+            navLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    if (window.innerWidth <= 768) {
+                        navbar.classList.remove('active');
+                    }
+
+                    // Rimuovi la classe active da tutti i link
+                    navLinks.forEach(l => l.classList.remove('active'));
+
+                    // Aggiungi la classe active al link cliccato
+                    this.classList.add('active');
+                });
+            });
+
+            // Evidenzia il link attivo durante lo scroll
+            window.addEventListener('scroll', function () {
+                const sections = document.querySelectorAll('.main-section');
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Imposta il primo link come attivo all'avvio
+            navLinks[0].classList.add('active');
+        });
+    </script>
+</body>
+
+</html>

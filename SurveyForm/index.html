@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title">Sondaggio di Feedback</h1>
+        <p id="description">Grazie per dedicare del tempo a migliorare i nostri servizi</p>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Nome</label>
+                <input id="name" type="text" placeholder="Inserisci il tuo nome" required>
+            </div>
+
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input id="email" type="email" placeholder="Inserisci la tua email" required>
+            </div>
+
+            <div class="form-group">
+                <label id="number-label" for="number">Valutazione (da 1 a 10)</label>
+                <input id="number" type="number" placeholder="Valutazione" min="1" max="10">
+            </div>
+
+            <div class="form-group">
+                <label for="dropdown">Seleziona un'opzione</label>
+                <select id="dropdown">
+                    <option value="" disabled selected>Scegli un'opzione</option>
+                    <option value="option1">Opzione 1</option>
+                    <option value="option2">Opzione 2</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Preferenza</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="radio1" name="preference" value="prova1">
+                        <label for="radio1">Opzione 1</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="radio2" name="preference" value="prova2">
+                        <label for="radio2">Opzione 2</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Seleziona tutte le opzioni applicabili</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="check1" value="prova1">
+                        <label for="check1">Opzione 1</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="check2" value="prova2">
+                        <label for="check2">Opzione 2</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Commenti aggiuntivi</label>
+                <textarea id="comments" placeholder="Inserisci qui i tuoi commenti..."></textarea>
+            </div>
+
+            <button id="submit" type="submit">Invia</button>
+        </form>
+    </div>
+</body>
+
+</html>
