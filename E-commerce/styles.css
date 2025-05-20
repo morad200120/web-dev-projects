@@ -1,0 +1,136 @@
+/* Importazione dei font */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    /* Previene lo scroll orizzontale */
+}
+
+h1,
+h2,
+h3,
+.nav-link,
+.text-giant {
+    font-family: var(--font-heading);
+}
+
+.campaign-card:hover img {
+    transform: scale(1.03);
+    transition: transform 0.5s ease;
+}
+
+.campaign-card img {
+    transition: transform 0.5s ease;
+}
+
+/* Menu mobile */
+.mobile-menu {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.mobile-menu.hidden {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* Classe personalizzata per testo gigante con migliore responsività */
+.text-giant {
+    font-size: clamp(2.5rem, 8vw, 12rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+}
+
+/* Migliora la leggibilità su schermi piccoli */
+@media (max-width: 640px) {
+    .text-giant {
+        line-height: 1;
+    }
+}
+
+/* Nascondi il checkbox ma mantieni la funzionalità */
+.dropdown-toggle {
+    display: none;
+}
+
+/* Stile per il contenuto del dropdown */
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    opacity: 0;
+}
+
+/* Quando il checkbox è selezionato, mostra il contenuto */
+.dropdown-toggle:checked~.dropdown-content {
+    max-height: 500px;
+    opacity: 1;
+    padding-bottom: 1.5rem;
+}
+
+/* Cambia il simbolo quando il dropdown è aperto */
+.dropdown-toggle:checked~.dropdown-label .plus-icon {
+    display: none;
+}
+
+.dropdown-toggle:not(:checked)~.dropdown-label .minus-icon {
+    display: none;
+}
+
+/* Stile per la sezione delle carte scorrevoli */
+.cards-container {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.cards-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.card-item {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@media (hover: hover) {
+    .card-item:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Effetto di scorrimento fluido */
+.snap-x {
+    scroll-snap-type: x mandatory;
+}
+
+.snap-center {
+    scroll-snap-align: center;
+}
+
+/* Indicatori di scorrimento */
+.scroll-indicator {
+    height: 3px;
+    width: 40px;
+    background-color: #333;
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-indicator.active {
+    background-color: #00ff97;
+}
+
+/* Nascondi gli indicatori su schermi grandi */
+@media (min-width: 1280px) {
+    .indicators-container {
+        display: none;
+    }
+}
