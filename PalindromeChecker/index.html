@@ -8,68 +8,104 @@
     <title>Palindrome Checker</title>
   </head>
   <body class="flex flex-col bg-[#edeafe] p-3 min-h-screen">
-    <main class="bg-white rounded-3xl flex flex-col gap-3 overflow-hidden max-w-2xl mx-auto w-full">
+    <main
+      class="bg-white rounded-3xl flex flex-col gap-3 overflow-hidden max-w-2xl mx-auto w-full"
+    >
       <section class="px-4 sm:px-10 py-4 text-white bg-[#631bff] text-center">
         <h1 class="font-semibold text-lg sm:text-xl">Palindrome Checker</h1>
-        <p class="text-xs sm:text-sm">Verifica se una parola o una frase è palindroma</p>
+        <p class="text-xs sm:text-sm">
+          Verifica se una parola o una frase è palindroma
+        </p>
       </section>
-      
+
       <section class="px-4 sm:px-7">
         <div class="flex flex-col gap-4 sm:gap-6">
-            <div class="flex flex-col gap-2">
-                <label class="text-xs sm:text-sm font-medium" for="text-input">Inserisci una parola o frase</label>
-                <input 
-                  class="w-full text-sm py-2 sm:py-3 border-[#d5d9de] px-4 rounded-full border-2 focus:border-[#631bff] focus:outline-none transition-colors" 
-                  id="text-input" 
-                  placeholder="Es. radar, oro, anna..." 
-                  type="text"
-                >
-            </div>
-            
-            <button 
-              id="check-btn" 
-              class="bg-[#631bff] text-white py-2 sm:py-3 px-6 rounded-full font-medium text-sm hover:bg-[#5a18e6] transition-colors focus:outline-none focus:ring-2 focus:ring-[#631bff] focus:ring-offset-2"
-              type="button"
+          <div class="flex flex-col gap-2">
+            <label class="text-xs sm:text-sm font-medium" for="text-input"
+              >Inserisci una parola o frase</label
             >
-              Verifica Palindromo
-            </button>
-            
-            <div id="result-container" class="hidden">
-              <div id="result" class="p-4 rounded-2xl text-center font-medium text-sm"></div>
-            </div>
-            
-            <p class="text-center text-gray-700 text-xs sm:text-sm">Inserisci una parola o frase da verificare</p>
-            <hr class="border-gray-200">
+            <input
+              class="w-full text-sm py-2 sm:py-3 border-[#d5d9de] px-4 rounded-full border-2 focus:border-[#631bff] focus:outline-none transition-colors"
+              id="text-input"
+              placeholder="Es. radar, oro, anna..."
+              type="text"
+            />
+          </div>
+
+          <button
+            id="check-btn"
+            class="bg-[#631bff] text-white py-2 sm:py-3 px-6 rounded-full font-medium text-sm hover:bg-[#5a18e6] transition-colors focus:outline-none focus:ring-2 focus:ring-[#631bff] focus:ring-offset-2"
+            type="button"
+          >
+            Verifica Palindromo
+          </button>
+
+          <div id="result-container" class="hidden">
+            <div
+              id="result"
+              class="p-4 rounded-2xl text-center font-medium text-sm"
+            ></div>
+          </div>
+
+          <p class="text-center text-gray-700 text-xs sm:text-sm">
+            Inserisci una parola o frase da verificare
+          </p>
+          <hr class="border-gray-200" />
         </div>
       </section>
-      
-      <section class="flex flex-col gap-2 border-b border-gray-200 px-4 sm:px-7 pb-6 sm:pb-8">
+
+      <section
+        class="flex flex-col gap-2 border-b border-gray-200 px-4 sm:px-7 pb-6 sm:pb-8"
+      >
         <div class="flex justify-between items-center">
-            <span class="text-xs sm:text-sm font-medium">Cos'è una parola palindroma?</span>
-            <button id="description-btn" type="button" class="p-1 hover:bg-gray-100 rounded-full transition-colors">
-              <svg id="menu-arrow" class="duration-300 w-4 h-4 sm:w-5 sm:h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path fill="#000" d="M16.939 7.939L12 12.879l-4.939-4.94l-2.122 2.122L12 17.121l7.061-7.06z"/>
-              </svg>
-            </button>
+          <span class="text-xs sm:text-sm font-medium"
+            >Cos'è una parola palindroma?</span
+          >
+          <button
+            id="description-btn"
+            type="button"
+            class="p-1 hover:bg-gray-100 rounded-full transition-colors"
+          >
+            <svg
+              id="menu-arrow"
+              class="duration-300 w-4 h-4 sm:w-5 sm:h-5"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#000"
+                d="M16.939 7.939L12 12.879l-4.939-4.94l-2.122 2.122L12 17.121l7.061-7.06z"
+              />
+            </svg>
+          </button>
         </div>
-        
-        <div id="palindrome-description" class="hidden flex-col text-gray-700 gap-3 text-xs sm:text-sm">
-            <p>Una parola palindroma è una parola, frase, numero o altra sequenza di caratteri che si legge allo stesso modo in entrambe le direzioni, ignorando spazi, punteggiatura e maiuscole/minuscole.</p>
-            <div class="flex flex-col gap-2">
-                <p class="font-medium">Esempi:</p>
-                <ul class="pl-4 list-disc space-y-1">
-                    <li>radar</li>
-                    <li>Anna</li>
-                    <li>i topi non avevano nipoti</li> 
-                    <li>oro</li>
-                    <li>A man a plan a canal Panama</li>
-                </ul>
-            </div>
+
+        <div
+          id="palindrome-description"
+          class="hidden flex-col text-gray-700 gap-3 text-xs sm:text-sm"
+        >
+          <p>
+            Una parola palindroma è una parola, frase, numero o altra sequenza
+            di caratteri che si legge allo stesso modo in entrambe le direzioni,
+            ignorando spazi, punteggiatura e maiuscole/minuscole.
+          </p>
+          <div class="flex flex-col gap-2">
+            <p class="font-medium">Esempi:</p>
+            <ul class="pl-4 list-disc space-y-1">
+              <li>radar</li>
+              <li>Anna</li>
+              <li>i topi non avevano nipoti</li>
+              <li>oro</li>
+              <li>A man a plan a canal Panama</li>
+            </ul>
+          </div>
         </div>
       </section>
-      
+
       <section class="px-4 sm:px-10 pb-5">
-        <p class="text-gray-700 text-xs sm:text-sm text-center">Verifica velocemente se una parola o frase è palindroma</p>
+        <p class="text-gray-700 text-xs sm:text-sm text-center">
+          Verifica velocemente se una parola o frase è palindroma
+        </p>
       </section>
     </main>
     <script src="script.js"></script>

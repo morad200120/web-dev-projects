@@ -1,529 +1,741 @@
 <!DOCTYPE html>
 <html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BING + BORG Marketing Agency - Soluzioni di marketing innovative e creative">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BING + BORG Marketing Agency - Soluzioni di marketing innovative e creative"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>BING + BORG | Marketing Agency</title>
-    <link rel="stylesheet" href="/E-commerce/styles.css">
-</head>
+    <link rel="stylesheet" href="/E-commerce/styles.css" />
+  </head>
 
-<body class="bg-[#171717] text-white">
-    <header class="w-full px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 py-4 sm:py-5 md:py-6 lg:py-8 xl:py-10">
-        <nav class="w-full flex justify-between items-center" aria-label="Navigazione principale">
-            <div>
-                <a href="#home" class="text-[#00ff97] text-xl sm:text-2xl md:text-2xl lg:text-3xl font-medium">BING +
-                    BORG</a>
-            </div>
-
-            <!-- Menu desktop - visibile solo su schermi md e superiori -->
-            <div class="hidden md:flex gap-3 lg:gap-6 xl:gap-8 items-center">
-                <a href="#home"
-                    class="nav-link text-[#00ff97] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline">HOME</a>
-                <a href="#works"
-                    class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
-                <a href="#about"
-                    class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
-                <a href="#insights"
-                    class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
-                <a href="#contact"
-                    class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
-            </div>
-
-            <!-- Hamburger menu - visibile solo su schermi piccoli -->
-            <button id="menuButton" class="md:hidden text-white focus:outline-none" aria-label="Menu"
-                aria-expanded="false" aria-controls="mobileMenu">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-7 sm:w-7" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </nav>
-
-        <!-- Menu mobile - nascosto di default -->
-        <div id="mobileMenu" class="mobile-menu hidden fixed inset-0 bg-[#171717] bg-opacity-95 z-50 md:hidden">
-            <div class="flex justify-end p-4">
-                <button id="closeMenuButton" class="text-white focus:outline-none" aria-label="Chiudi menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-7 sm:w-7" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <nav class="flex flex-col items-center justify-center h-full gap-6 sm:gap-8 -mt-16"
-                aria-label="Menu mobile">
-                <a href="#home" class="nav-link text-[#00ff97] text-2xl sm:text-3xl hover:underline">HOME</a>
-                <a href="#works"
-                    class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors">WORKS</a>
-                <a href="#about"
-                    class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors">ABOUT</a>
-                <a href="#insights"
-                    class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors">INSIGHTS</a>
-                <a href="#contact"
-                    class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors">CONTACT</a>
-            </nav>
+  <body class="bg-[#171717] text-white">
+    <header
+      class="w-full px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 py-4 sm:py-5 md:py-6 lg:py-8 xl:py-10"
+    >
+      <nav
+        class="w-full flex justify-between items-center"
+        aria-label="Navigazione principale"
+      >
+        <div>
+          <a
+            href="#home"
+            class="text-[#00ff97] text-xl sm:text-2xl md:text-2xl lg:text-3xl font-medium"
+            >BING + BORG</a
+          >
         </div>
+
+        <!-- Menu desktop - visibile solo su schermi md e superiori -->
+        <div class="hidden md:flex gap-3 lg:gap-6 xl:gap-8 items-center">
+          <a
+            href="#home"
+            class="nav-link text-[#00ff97] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline"
+            >HOME</a
+          >
+          <a
+            href="#works"
+            class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors"
+            >WORKS</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors"
+            >ABOUT</a
+          >
+          <a
+            href="#insights"
+            class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors"
+            >INSIGHTS</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl hover:underline hover:text-[#00ff97] transition-colors"
+            >CONTACT</a
+          >
+        </div>
+
+        <!-- Hamburger menu - visibile solo su schermi piccoli -->
+        <button
+          id="menuButton"
+          class="md:hidden text-white focus:outline-none"
+          aria-label="Menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 sm:h-7 sm:w-7"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Menu mobile - nascosto di default -->
+      <div
+        id="mobileMenu"
+        class="mobile-menu hidden fixed inset-0 bg-[#171717] bg-opacity-95 z-50 md:hidden"
+      >
+        <div class="flex justify-end p-4">
+          <button
+            id="closeMenuButton"
+            class="text-white focus:outline-none"
+            aria-label="Chiudi menu"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 sm:h-7 sm:w-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav
+          class="flex flex-col items-center justify-center h-full gap-6 sm:gap-8 -mt-16"
+          aria-label="Menu mobile"
+        >
+          <a
+            href="#home"
+            class="nav-link text-[#00ff97] text-2xl sm:text-3xl hover:underline"
+            >HOME</a
+          >
+          <a
+            href="#works"
+            class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors"
+            >WORKS</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors"
+            >ABOUT</a
+          >
+          <a
+            href="#insights"
+            class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors"
+            >INSIGHTS</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-2xl sm:text-3xl hover:underline hover:text-[#00ff97] transition-colors"
+            >CONTACT</a
+          >
+        </nav>
+      </div>
     </header>
 
     <main class="w-full min-h-screen px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20">
-        <!-- Hero section -->
-        <section id="home"
-            class="w-full mt-8 sm:mt-12 md:mt-16 lg:mt-24 xl:mt-32 mb-8 sm:mb-10 md:mb-14 lg:mb-16 xl:mb-20">
-            <!-- Layout migliorato per mobile -->
-            <div class="w-full flex flex-col md:flex-row justify-between">
-                <div class="w-full mb-6 sm:mb-8 md:mb-0">
-                    <h1 class="font-bold leading-none">
-                        <span class="block text-[#00ff97] text-giant mb-2 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-10">Beyond
-                            Boundaries:</span>
-                        <span class="block text-white text-giant mb-2 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-10">Reimagine
-                            Your</span>
-                        <span class="block text-white text-giant">Marketing Journey</span>
-                    </h1>
-                </div>
-                <div class="self-start md:self-end mb-4 md:ml-4 lg:ml-6 xl:ml-8 shrink-0">
-                    <div class="flex space-x-4 sm:space-x-5 md:space-x-6 lg:space-x-7 xl:space-x-8">
-                        <a href="#works"
-                            class="nav-link flex items-center text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl hover:text-[#00ff97] transition-colors">
-                            PROJECTS
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 ml-1"
-                                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <a href="#insights"
-                            class="nav-link flex items-center text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl hover:text-[#00ff97] transition-colors">
-                            INSIGHTS
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 ml-1"
-                                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Linea divisoria -->
-        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
-
-        <!-- Sezione Latest Campaigns -->
-        <section id="works" class="w-full">
-            <h2
-                class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-medium mb-4 sm:mb-6 md:mb-8 lg:mb-10">
-                LATEST CAMPAIGNS</h2>
-
-            <!-- Grid modificata con testo più grande e spaziatura corretta -->
+      <!-- Hero section -->
+      <section
+        id="home"
+        class="w-full mt-8 sm:mt-12 md:mt-16 lg:mt-24 xl:mt-32 mb-8 sm:mb-10 md:mb-14 lg:mb-16 xl:mb-20"
+      >
+        <!-- Layout migliorato per mobile -->
+        <div class="w-full flex flex-col md:flex-row justify-between">
+          <div class="w-full mb-6 sm:mb-8 md:mb-0">
+            <h1 class="font-bold leading-none">
+              <span
+                class="block text-[#00ff97] text-giant mb-2 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-10"
+                >Beyond Boundaries:</span
+              >
+              <span
+                class="block text-white text-giant mb-2 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-10"
+                >Reimagine Your</span
+              >
+              <span class="block text-white text-giant">Marketing Journey</span>
+            </h1>
+          </div>
+          <div
+            class="self-start md:self-end mb-4 md:ml-4 lg:ml-6 xl:ml-8 shrink-0"
+          >
             <div
-                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 sm:gap-x-5 md:gap-x-6 lg:gap-x-8 xl:gap-x-10 gap-y-8 sm:gap-y-10 md:gap-y-12 lg:gap-y-14 xl:gap-y-16 mb-10 sm:mb-12 md:mb-16 lg:mb-20 mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-6">
-                <article class="campaign-card">
-                    <a href="/E-commerce/cards/card1/card1.html">
-                        <img class="w-full rounded-lg sm:rounded-xl"
-                            src="/E-commerce/E-commerce-images/Modella.avif"
-                            alt="Public Advertising campaign example">
-                        <h3
-                            class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
-                            Public Advertising
-                        </h3>
-                    </a>
-                </article>
-                <article class="campaign-card">
-                    <a href="/E-commerce/cards/card2/card2.html">
-                        <img class="w-full rounded-lg sm:rounded-xl"
-                            src="/E-commerce/E-commerce-images/CartelloMetro.avif"
-                            alt="Public Advertising campaign example">
-                        <h3
-                            class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
-                            Public Advertising
-                        </h3>
-                    </a>
-                </article>
-                <article class="campaign-card">
-                    <a href="/E-commerce/cards/card3/card3.html">
-                        <img class="w-full rounded-lg sm:rounded-xl"
-                            src="/E-commerce/E-commerce-images/Macchina.avif"
-                            alt="Public Advertising campaign example">
-                        <h3
-                            class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
-                            Public Advertising
-                        </h3>
-                    </a>
-                </article>
-                <article class="campaign-card">
-                    <a href="/E-commerce/cards/card4/card4.html">
-                        <img class="w-full rounded-lg sm:rounded-xl"
-                            src="/E-commerce/E-commerce-images/Tablet.avif"
-                            alt="Public Advertising campaign example">
-                        <h3
-                            class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
-                            Public Advertising
-                        </h3>
-                    </a>
-                </article>
-                <article class="campaign-card">
-                    <a href="/E-commerce/cards/card5/card5.html">
-                        <img class="w-full rounded-lg sm:rounded-xl"
-                            src="/E-commerce/E-commerce-images/NEX.png"
-                            alt="Public Advertising campaign example">
-                        <h3
-                            class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
-                            Public Advertising
-                        </h3>
-                    </a>
-                </article>
-                <article class="campaign-card">
-                    <a href="/E-commerce/cards/card6/card6.html">
-                        <img class="w-full rounded-lg sm:rounded-xl"
-                            src="/E-commerce/E-commerce-images/Cellulare.png"
-                            alt="Public Advertising campaign example">
-                        <h3
-                            class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light">
-                            Public Advertising
-                        </h3>
-                    </a>
-                </article>
+              class="flex space-x-4 sm:space-x-5 md:space-x-6 lg:space-x-7 xl:space-x-8"
+            >
+              <a
+                href="#works"
+                class="nav-link flex items-center text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl hover:text-[#00ff97] transition-colors"
+              >
+                PROJECTS
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 sm:h-5 sm:w-5 ml-1"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#insights"
+                class="nav-link flex items-center text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl hover:text-[#00ff97] transition-colors"
+              >
+                INSIGHTS
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 sm:h-5 sm:w-5 ml-1"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Linea divisoria -->
-        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
+      <!-- Linea divisoria -->
+      <div
+        class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"
+      ></div>
 
-        <!-- Prima sezione About Us -->
-        <section id="about" class="w-full mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">
-            <div class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20">
-                <div class="w-full lg:w-1/3">
-                    <h2 class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-7xl">LEARN ABOUT US</h2>
-                </div>
-                <div class="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20 w-full lg:w-2/3">
-                    <h3 class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl text-[#00ff97]">Our Journey</h3>
-                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed">
-                        This is a space to share more about the business: who's behind it,
-                        what it does and what this site has to offer. It's an opportunity to tell
-                        the story behind the business or
-                        describe a special service or product it offers. You can use this section to share the company's
-                        history or highlight a particular feature that sets it apart from
-                        competitors.
-                    </p>
-                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed">
-                        Let the writing speak for itself. Keep a consistent tone and voice
-                        throughout the website to stay true to the brand image and give
-                        visitors a taste of the company's values and personality.
-                    </p>
-                </div>
+      <!-- Sezione Latest Campaigns -->
+      <section id="works" class="w-full">
+        <h2
+          class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-medium mb-4 sm:mb-6 md:mb-8 lg:mb-10"
+        >
+          LATEST CAMPAIGNS
+        </h2>
+
+        <!-- Grid modificata con testo più grande e spaziatura corretta -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 sm:gap-x-5 md:gap-x-6 lg:gap-x-8 xl:gap-x-10 gap-y-8 sm:gap-y-10 md:gap-y-12 lg:gap-y-14 xl:gap-y-16 mb-10 sm:mb-12 md:mb-16 lg:mb-20 mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-6"
+        >
+          <article class="campaign-card">
+            <a href="/E-commerce/cards/card1/card1.html">
+              <img
+                class="w-full rounded-lg sm:rounded-xl"
+                src="/E-commerce/E-commerce-images/Modella.avif"
+                alt="Public Advertising campaign example"
+              />
+              <h3
+                class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light"
+              >
+                Public Advertising
+              </h3>
+            </a>
+          </article>
+          <article class="campaign-card">
+            <a href="/E-commerce/cards/card2/card2.html">
+              <img
+                class="w-full rounded-lg sm:rounded-xl"
+                src="/E-commerce/E-commerce-images/CartelloMetro.avif"
+                alt="Public Advertising campaign example"
+              />
+              <h3
+                class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light"
+              >
+                Public Advertising
+              </h3>
+            </a>
+          </article>
+          <article class="campaign-card">
+            <a href="/E-commerce/cards/card3/card3.html">
+              <img
+                class="w-full rounded-lg sm:rounded-xl"
+                src="/E-commerce/E-commerce-images/Macchina.avif"
+                alt="Public Advertising campaign example"
+              />
+              <h3
+                class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light"
+              >
+                Public Advertising
+              </h3>
+            </a>
+          </article>
+          <article class="campaign-card">
+            <a href="/E-commerce/cards/card4/card4.html">
+              <img
+                class="w-full rounded-lg sm:rounded-xl"
+                src="/E-commerce/E-commerce-images/Tablet.avif"
+                alt="Public Advertising campaign example"
+              />
+              <h3
+                class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light"
+              >
+                Public Advertising
+              </h3>
+            </a>
+          </article>
+          <article class="campaign-card">
+            <a href="/E-commerce/cards/card5/card5.html">
+              <img
+                class="w-full rounded-lg sm:rounded-xl"
+                src="/E-commerce/E-commerce-images/NEX.png"
+                alt="Public Advertising campaign example"
+              />
+              <h3
+                class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light"
+              >
+                Public Advertising
+              </h3>
+            </a>
+          </article>
+          <article class="campaign-card">
+            <a href="/E-commerce/cards/card6/card6.html">
+              <img
+                class="w-full rounded-lg sm:rounded-xl"
+                src="/E-commerce/E-commerce-images/Cellulare.png"
+                alt="Public Advertising campaign example"
+              />
+              <h3
+                class="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl mt-2 sm:mt-3 md:mt-4 lg:mt-5 xl:mt-7 font-light"
+              >
+                Public Advertising
+              </h3>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Linea divisoria -->
+      <div
+        class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"
+      ></div>
+
+      <!-- Prima sezione About Us -->
+      <section
+        id="about"
+        class="w-full mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24"
+      >
+        <div
+          class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20"
+        >
+          <div class="w-full lg:w-1/3">
+            <h2 class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-7xl">
+              LEARN ABOUT US
+            </h2>
+          </div>
+          <div
+            class="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20 w-full lg:w-2/3"
+          >
+            <h3
+              class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl text-[#00ff97]"
+            >
+              Our Journey
+            </h3>
+            <p
+              class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed"
+            >
+              This is a space to share more about the business: who's behind it,
+              what it does and what this site has to offer. It's an opportunity
+              to tell the story behind the business or describe a special
+              service or product it offers. You can use this section to share
+              the company's history or highlight a particular feature that sets
+              it apart from competitors.
+            </p>
+            <p
+              class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed"
+            >
+              Let the writing speak for itself. Keep a consistent tone and voice
+              throughout the website to stay true to the brand image and give
+              visitors a taste of the company's values and personality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Linea divisoria -->
+      <div
+        class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"
+      ></div>
+
+      <!-- Seconda sezione About Us (Purpose) -->
+      <section
+        id="purpose"
+        class="w-full mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24"
+      >
+        <div
+          class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20"
+        >
+          <div class="w-full lg:w-1/3">
+            <h2 class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-7xl">
+              OUR PURPOSE
+            </h2>
+          </div>
+          <div
+            class="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20 w-full lg:w-2/3"
+          >
+            <h3
+              class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl text-[#00ff97]"
+            >
+              Passion for Success
+            </h3>
+            <p
+              class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed"
+            >
+              This is a space to share more about the business: who's behind it,
+              what it does and what this site has to offer. It's an opportunity
+              to tell the story behind the business or describe a special
+              service or product it offers. You can use this section to share
+              the company's history or highlight a particular feature that sets
+              it apart from competitors.
+            </p>
+            <p
+              class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed"
+            >
+              Let the writing speak for itself. Keep a consistent tone and voice
+              throughout the website to stay true to the brand image and give
+              visitors a taste of the company's values and personality.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Linea divisoria -->
+      <div
+        class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"
+      ></div>
+
+      <!-- Sezione "WHAT WE STAND FOR" migliorata -->
+      <section class="w-full my-10 sm:my-12 md:my-16 lg:my-20 xl:my-24">
+        <div class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12">
+          <h2 class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-7xl">
+            WHAT WE STAND FOR
+          </h2>
+
+          <!-- Contenitore scorrevole migliorato -->
+          <div class="w-full relative">
+            <div
+              class="cards-container relative flex gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 pb-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+            >
+              <div
+                class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1"
+              >
+                <p
+                  class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4"
+                >
+                  01
+                </p>
+                <h3
+                  class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6"
+                >
+                  Creativity
+                </h3>
+                <p
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300"
+                >
+                  We think outside the box to deliver innovative solutions that
+                  make your brand stand out.
+                </p>
+              </div>
+
+              <div
+                class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1"
+              >
+                <p
+                  class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4"
+                >
+                  02
+                </p>
+                <h3
+                  class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6"
+                >
+                  Integrity
+                </h3>
+                <p
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300"
+                >
+                  We build trust through transparency, honesty, and ethical
+                  business practices.
+                </p>
+              </div>
+
+              <div
+                class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1"
+              >
+                <p
+                  class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4"
+                >
+                  03
+                </p>
+                <h3
+                  class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6"
+                >
+                  Adaptability
+                </h3>
+                <p
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300"
+                >
+                  We evolve with the market, embracing change and new
+                  technologies to keep you ahead.
+                </p>
+              </div>
+
+              <div
+                class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1"
+              >
+                <p
+                  class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4"
+                >
+                  04
+                </p>
+                <h3
+                  class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6"
+                >
+                  Collaboration
+                </h3>
+                <p
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300"
+                >
+                  We work closely with you, ensuring your vision is at the heart
+                  of everything we create.
+                </p>
+              </div>
+
+              <div
+                class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1"
+              >
+                <p
+                  class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4"
+                >
+                  05
+                </p>
+                <h3
+                  class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6"
+                >
+                  Result-Driven
+                </h3>
+                <p
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300"
+                >
+                  We focus on delivering measurable outcomes that drive growth
+                  and success for your business.
+                </p>
+              </div>
             </div>
-        </section>
 
-        <!-- Linea divisoria -->
-        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
-
-        <!-- Seconda sezione About Us (Purpose) -->
-        <section id="purpose" class="w-full mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">
-            <div class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20">
-                <div class="w-full lg:w-1/3">
-                    <h2 class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-7xl">OUR PURPOSE</h2>
-                </div>
-                <div class="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-16 xl:gap-20 w-full lg:w-2/3">
-                    <h3 class="text-lg sm:text-xl md:text-2xl lg:text-4xl xl:text-5xl text-[#00ff97]">Passion for
-                        Success</h3>
-                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed">
-                        This is a space to share more about the business: who's behind it,
-                        what it does and what this site has to offer. It's an opportunity to tell
-                        the story behind the business or
-                        describe a special service or product it offers. You can use this section to share the company's
-                        history or highlight a particular feature that sets it apart from
-                        competitors.
-                    </p>
-                    <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-4xl lg:leading-relaxed">
-                        Let the writing speak for itself. Keep a consistent tone and voice
-                        throughout the website to stay true to the brand image and give
-                        visitors a taste of the company's values and personality.
-                    </p>
-                </div>
+            <!-- Indicatori di scorrimento -->
+            <div
+              class="indicators-container flex justify-center mt-6 sm:mt-8 md:mt-10 gap-2"
+            >
+              <span class="scroll-indicator active" data-index="0"></span>
+              <span class="scroll-indicator" data-index="1"></span>
+              <span class="scroll-indicator" data-index="2"></span>
+              <span class="scroll-indicator" data-index="3"></span>
+              <span class="scroll-indicator" data-index="4"></span>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
+      <!-- Linea divisoria -->
+      <div
+        class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"
+      ></div>
 
-        <!-- Linea divisoria -->
-        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
-
-        <!-- Sezione "WHAT WE STAND FOR" migliorata -->
-        <section class="w-full my-10 sm:my-12 md:my-16 lg:my-20 xl:my-24">
-            <div class="w-full flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-12">
-                <h2 class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-7xl">WHAT WE STAND FOR</h2>
-
-                <!-- Contenitore scorrevole migliorato -->
-                <div class="w-full relative">
-                    <div
-                        class="cards-container relative flex gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 pb-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
-                        <div
-                            class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1">
-                            <p
-                                class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4">
-                                01</p>
-                            <h3
-                                class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                                Creativity</h3>
-                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">We think outside the
-                                box
-                                to deliver innovative solutions that make your brand stand out.</p>
-                        </div>
-
-                        <div
-                            class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1">
-                            <p
-                                class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4">
-                                02</p>
-                            <h3
-                                class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                                Integrity</h3>
-                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">We build trust through
-                                transparency, honesty, and ethical business practices.</p>
-                        </div>
-
-                        <div
-                            class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1">
-                            <p
-                                class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4">
-                                03</p>
-                            <h3
-                                class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                                Adaptability</h3>
-                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">We evolve with the
-                                market,
-                                embracing change and new technologies to keep you ahead.</p>
-                        </div>
-
-                        <div
-                            class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1">
-                            <p
-                                class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4">
-                                04</p>
-                            <h3
-                                class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                                Collaboration</h3>
-                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">We work closely with
-                                you,
-                                ensuring your vision is at the heart of everything we create.</p>
-                        </div>
-
-                        <div
-                            class="card-item snap-center min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[320px] xl:min-w-[340px] bg-[#2f2f2f] rounded-lg sm:rounded-xl p-6 sm:p-7 md:p-8 lg:p-10 xl:p-12 transition-all duration-300 hover:bg-[#3a3a3a] hover:shadow-lg hover:shadow-[#00ff97]/10 hover:-translate-y-1">
-                            <p
-                                class="text-[#00ff97] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-2 sm:mb-3 md:mb-4">
-                                05</p>
-                            <h3
-                                class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                                Result-Driven</h3>
-                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">We focus on delivering
-                                measurable outcomes that drive growth and success for your business.</p>
-                        </div>
-                    </div>
-
-                    <!-- Indicatori di scorrimento -->
-                    <div class="indicators-container flex justify-center mt-6 sm:mt-8 md:mt-10 gap-2">
-                        <span class="scroll-indicator active" data-index="0"></span>
-                        <span class="scroll-indicator" data-index="1"></span>
-                        <span class="scroll-indicator" data-index="2"></span>
-                        <span class="scroll-indicator" data-index="3"></span>
-                        <span class="scroll-indicator" data-index="4"></span>
-                    </div>
-                </div>
+      <section class="w-full">
+        <div
+          class="w-full flex flex-col justify-between lg:gap-10 xl:gap-20 lg:flex-row"
+        >
+          <div class="w-full">
+            <p
+              class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl mt-6 sm:mt-8 md:mt-10"
+            >
+              TAILORED SOLUTIONS
+            </p>
+          </div>
+          <div class="w-full">
+            <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
+              <input type="checkbox" id="dropdown1" class="dropdown-toggle" />
+              <label
+                for="dropdown1"
+                class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer"
+              >
+                <span
+                  class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light"
+                  >SEO</span
+                >
+                <span
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light"
+                >
+                  <span class="plus-icon">+</span>
+                  <span class="minus-icon">-</span>
+                </span>
+              </label>
+              <div class="dropdown-content">
+                <p
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed"
+                >
+                  Let the writing speak for itself. Keep a consistent tone and
+                  voice throughout the website to stay true to the brand image
+                  and give visitors a taste of the company's values and
+                  personality.
+                </p>
+              </div>
             </div>
-        </section>
-
-        <!-- Linea divisoria -->
-        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
-
-        <section class="w-full">
-            <div class="w-full flex flex-col justify-between lg:gap-10 xl:gap-20 lg:flex-row">
-                <div class="w-full">
-                    <p class="text-lg sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl mt-6 sm:mt-8 md:mt-10">TAILORED
-                        SOLUTIONS</p>
-                </div>
-                <div class="w-full">
-                    <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
-                        <input type="checkbox" id="dropdown1" class="dropdown-toggle">
-                        <label for="dropdown1"
-                            class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer">
-                            <span
-                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light">SEO</span>
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light">
-                                <span class="plus-icon">+</span>
-                                <span class="minus-icon">-</span>
-                            </span>
-                        </label>
-                        <div class="dropdown-content">
-                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed">
-                                Let the writing speak for itself. Keep a consistent tone and voice throughout the
-                                website to stay true to the brand image and give visitors a taste of the company's
-                                values and personality.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
-                        <input type="checkbox" id="dropdown2" class="dropdown-toggle">
-                        <label for="dropdown2"
-                            class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer">
-                            <span
-                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light">PPC</span>
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light">
-                                <span class="plus-icon">+</span>
-                                <span class="minus-icon">-</span>
-                            </span>
-                        </label>
-                        <div class="dropdown-content">
-                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed">
-                                Let the writing speak for itself. Keep a consistent tone and voice throughout the
-                                website to stay true to the brand image and give visitors a taste of the company's
-                                values and personality.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
-                        <input type="checkbox" id="dropdown3" class="dropdown-toggle">
-                        <label for="dropdown3"
-                            class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer">
-                            <span
-                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light">Branding</span>
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light">
-                                <span class="plus-icon">+</span>
-                                <span class="minus-icon">-</span>
-                            </span>
-                        </label>
-                        <div class="dropdown-content">
-                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed">
-                                Let the writing speak for itself. Keep a consistent tone and voice throughout the
-                                website to stay true to the brand image and give visitors a taste of the company's
-                                values and personality.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
-                        <input type="checkbox" id="dropdown4" class="dropdown-toggle">
-                        <label for="dropdown4"
-                            class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer">
-                            <span
-                                class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light">Portfolio</span>
-                            <span class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light">
-                                <span class="plus-icon">+</span>
-                                <span class="minus-icon">-</span>
-                            </span>
-                        </label>
-                        <div class="dropdown-content">
-                            <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed">
-                                Let the writing speak for itself. Keep a consistent tone and voice throughout the
-                                website to stay true to the brand image and give visitors a taste of the company's
-                                values and personality.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
+              <input type="checkbox" id="dropdown2" class="dropdown-toggle" />
+              <label
+                for="dropdown2"
+                class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer"
+              >
+                <span
+                  class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light"
+                  >PPC</span
+                >
+                <span
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light"
+                >
+                  <span class="plus-icon">+</span>
+                  <span class="minus-icon">-</span>
+                </span>
+              </label>
+              <div class="dropdown-content">
+                <p
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed"
+                >
+                  Let the writing speak for itself. Keep a consistent tone and
+                  voice throughout the website to stay true to the brand image
+                  and give visitors a taste of the company's values and
+                  personality.
+                </p>
+              </div>
             </div>
-        </section>
+            <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
+              <input type="checkbox" id="dropdown3" class="dropdown-toggle" />
+              <label
+                for="dropdown3"
+                class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer"
+              >
+                <span
+                  class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light"
+                  >Branding</span
+                >
+                <span
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light"
+                >
+                  <span class="plus-icon">+</span>
+                  <span class="minus-icon">-</span>
+                </span>
+              </label>
+              <div class="dropdown-content">
+                <p
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed"
+                >
+                  Let the writing speak for itself. Keep a consistent tone and
+                  voice throughout the website to stay true to the brand image
+                  and give visitors a taste of the company's values and
+                  personality.
+                </p>
+              </div>
+            </div>
+            <div class="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2 border-b-1">
+              <input type="checkbox" id="dropdown4" class="dropdown-toggle" />
+              <label
+                for="dropdown4"
+                class="dropdown-label flex justify-between items-center py-4 sm:py-5 md:py-6 w-full cursor-pointer"
+              >
+                <span
+                  class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#8b8b8b] font-light"
+                  >Portfolio</span
+                >
+                <span
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light"
+                >
+                  <span class="plus-icon">+</span>
+                  <span class="minus-icon">-</span>
+                </span>
+              </label>
+              <div class="dropdown-content">
+                <p
+                  class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed"
+                >
+                  Let the writing speak for itself. Keep a consistent tone and
+                  voice throughout the website to stay true to the brand image
+                  and give visitors a taste of the company's values and
+                  personality.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <div class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"></div>
+      <div
+        class="w-full h-px bg-gray-800 my-6 sm:my-8 md:my-10 lg:my-12 xl:my-14"
+      ></div>
     </main>
 
-    <footer class="w-full px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 py-6 sm:py-7 md:py-8 lg:py-10 bg-[#111111]">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-xs sm:text-sm md:text-base mb-3 sm:mb-4 md:mb-0">Lorem ipsum dolor sit amet consectetur adipi
-            </p>
-            <div class="flex gap-4 sm:gap-5 md:gap-6">
-                <a href="#" class="text-xs sm:text-sm md:text-base hover:text-[#00ff97]">Privacy Policy</a>
-                <a href="#" class="text-xs sm:text-sm md:text-base hover:text-[#00ff97]">Terms of Service</a>
-            </div>
+    <footer
+      class="w-full px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 py-6 sm:py-7 md:py-8 lg:py-10 bg-[#111111]"
+    >
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-xs sm:text-sm md:text-base mb-3 sm:mb-4 md:mb-0">
+          Lorem ipsum dolor sit amet consectetur adipi
+        </p>
+        <div class="flex gap-4 sm:gap-5 md:gap-6">
+          <a
+            href="#"
+            class="text-xs sm:text-sm md:text-base hover:text-[#00ff97]"
+            >Privacy Policy</a
+          >
+          <a
+            href="#"
+            class="text-xs sm:text-sm md:text-base hover:text-[#00ff97]"
+            >Terms of Service</a
+          >
         </div>
+      </div>
     </footer>
 
     <!-- Script per il menu mobile -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuButton = document.getElementById('menuButton');
-            const closeMenuButton = document.getElementById('closeMenuButton');
-            const mobileMenu = document.getElementById('mobileMenu');
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("menuButton");
+        const closeMenuButton = document.getElementById("closeMenuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
 
-            menuButton.addEventListener('click', function () {
-                mobileMenu.classList.remove('hidden');
-                menuButton.setAttribute('aria-expanded', 'true');
-            });
-
-            closeMenuButton.addEventListener('click', function () {
-                mobileMenu.classList.add('hidden');
-                menuButton.setAttribute('aria-expanded', 'false');
-            });
-
-            // Chiudi il menu quando si clicca su un link
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    mobileMenu.classList.add('hidden');
-                    menuButton.setAttribute('aria-expanded', 'false');
-                });
-            });
+        menuButton.addEventListener("click", function () {
+          mobileMenu.classList.remove("hidden");
+          menuButton.setAttribute("aria-expanded", "true");
         });
+
+        closeMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+          menuButton.setAttribute("aria-expanded", "false");
+        });
+
+        // Chiudi il menu quando si clicca su un link
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        mobileMenuLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+            menuButton.setAttribute("aria-expanded", "false");
+          });
+        });
+      });
     </script>
 
     <!-- Script per gli indicatori di scorrimento -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const cards = document.querySelectorAll('.card-item');
-            const indicators = document.querySelectorAll('.scroll-indicator');
-            const cardsContainer = document.querySelector('.cards-container');
-
-            // Configurazione dell'Intersection Observer
-            const options = {
-                root: cardsContainer,
-                rootMargin: '0px',
-                threshold: 0.6 // La carta è considerata visibile quando è visibile al 60%
-            };
-
-            // Callback per l'Intersection Observer
-            const callback = (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Trova l'indice della carta visibile
-                        const visibleCard = entry.target;
-                        const visibleIndex = Array.from(cards).indexOf(visibleCard);
-
-                        // Aggiorna gli indicatori
-                        indicators.forEach((indicator, index) => {
-                            if (index === visibleIndex) {
-                                indicator.classList.add('active');
-                            } else {
-                                indicator.classList.remove('active');
-                            }
-                        });
-                    }
-                });
-            };
-
-            // Crea l'observer
-            const observer = new IntersectionObserver(callback, options);
-
-            // Osserva tutte le carte
-            cards.forEach(card => {
-                observer.observe(card);
-            });
-
-            // Gestione del click sugli indicatori
-            indicators.forEach((indicator, index) => {
-                indicator.addEventListener('click', () => {
-                    // Scorri alla carta corrispondente
-                    cards[index].scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'nearest',
-                        inline: 'center'
-                    });
-                });
-            });
-        });
-    </script>
-</body>
-
+    <script src="/E-commerce/script.js"></script>
+  </body>
 </html>

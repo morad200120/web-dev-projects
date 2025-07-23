@@ -1,42 +1,42 @@
-const palindromeDescription = document.querySelector("#palindrome-description")
-const descriptionBtn = document.querySelector("#description-btn")
-const menuArrow = document.querySelector("#menu-arrow")
-const textInput = document.querySelector("#text-input")
-const checkBtn = document.querySelector("#check-btn")
-const resultContainer = document.querySelector("#result-container")
-const result = document.querySelector("#result")
+const palindromeDescription = document.querySelector("#palindrome-description");
+const descriptionBtn = document.querySelector("#description-btn");
+const menuArrow = document.querySelector("#menu-arrow");
+const textInput = document.querySelector("#text-input");
+const checkBtn = document.querySelector("#check-btn");
+const resultContainer = document.querySelector("#result-container");
+const result = document.querySelector("#result");
 
-let isMenuOpen = false
+let isMenuOpen = false;
 
 // Toggle menu arrow and description
 menuArrow.addEventListener("click", () => {
-  menuArrow.classList.toggle("rotate-180")
-})
+  menuArrow.classList.toggle("rotate-180");
+});
 
 descriptionBtn.addEventListener("click", () => {
-  palindromeDescription.classList.toggle("hidden")
-  isMenuOpen = !isMenuOpen
-})
+  palindromeDescription.classList.toggle("hidden");
+  isMenuOpen = !isMenuOpen;
+});
 
 // Function to clean text for palindrome checking
 function cleanText(text) {
-  return text.toLowerCase().replace(/[^a-z0-9]/g, "") // Remove all non-alphanumeric characters
+  return text.toLowerCase().replace(/[^a-z0-9]/g, ""); // Remove all non-alphanumeric characters
 }
 
 // Function to check if text is palindrome
 function isPalindrome(text) {
-  const cleaned = cleanText(text)
-  const reversed = cleaned.split("").reverse().join("")
-  return cleaned === reversed
+  const cleaned = cleanText(text);
+  const reversed = cleaned.split("").reverse().join("");
+  return cleaned === reversed;
 }
 
 // Function to display result
 function displayResult(text, isPalin) {
-  resultContainer.classList.remove("hidden")
+  resultContainer.classList.remove("hidden");
 
   if (isPalin) {
     result.className =
-      "p-4 rounded-2xl text-center font-medium text-sm bg-green-100 text-green-800 border-2 border-green-200"
+      "p-4 rounded-2xl text-center font-medium text-sm bg-green-100 text-green-800 border-2 border-green-200";
     result.innerHTML = `
             <div class="flex items-center justify-center gap-2 mb-2">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -45,9 +45,10 @@ function displayResult(text, isPalin) {
                 <span class="font-semibold">È un palindromo!</span>
             </div>
             <p>"<span class="font-medium">${text}</span>" si legge allo stesso modo in entrambe le direzioni.</p>
-        `
+        `;
   } else {
-    result.className = "p-4 rounded-2xl text-center font-medium text-sm bg-red-100 text-red-800 border-2 border-red-200"
+    result.className =
+      "p-4 rounded-2xl text-center font-medium text-sm bg-red-100 text-red-800 border-2 border-red-200";
     result.innerHTML = `
             <div class="flex items-center justify-center gap-2 mb-2">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -56,20 +57,20 @@ function displayResult(text, isPalin) {
                 <span class="font-semibold">Non è un palindromo</span>
             </div>
             <p>"<span class="font-medium">${text}</span>" non si legge allo stesso modo in entrambe le direzioni.</p>
-        `
+        `;
   }
 
   // Scroll to result
-  resultContainer.scrollIntoView({ behavior: "smooth", block: "nearest" })
+  resultContainer.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 // Function to check palindrome
 function checkPalindrome() {
-  const text = textInput.value.trim()
+  const text = textInput.value.trim();
 
   if (!text) {
     result.className =
-      "p-4 rounded-2xl text-center font-medium text-sm bg-yellow-100 text-yellow-800 border-2 border-yellow-200"
+      "p-4 rounded-2xl text-center font-medium text-sm bg-yellow-100 text-yellow-800 border-2 border-yellow-200";
     result.innerHTML = `
             <div class="flex items-center justify-center gap-2 mb-2">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -78,32 +79,32 @@ function checkPalindrome() {
                 <span class="font-semibold">Attenzione</span>
             </div>
             <p>Inserisci una parola o frase da verificare.</p>
-        `
-    resultContainer.classList.remove("hidden")
-    return
+        `;
+    resultContainer.classList.remove("hidden");
+    return;
   }
 
-  const palindromeResult = isPalindrome(text)
-  displayResult(text, palindromeResult)
+  const palindromeResult = isPalindrome(text);
+  displayResult(text, palindromeResult);
 }
 
 // Event listeners
-checkBtn.addEventListener("click", checkPalindrome)
+checkBtn.addEventListener("click", checkPalindrome);
 
 textInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
-    checkPalindrome()
+    checkPalindrome();
   }
-})
+});
 
 // Clear result when input changes
 textInput.addEventListener("input", () => {
   if (!resultContainer.classList.contains("hidden")) {
-    resultContainer.classList.add("hidden")
+    resultContainer.classList.add("hidden");
   }
-})
+});
 
 // Focus input on page load
 window.addEventListener("load", () => {
-  textInput.focus()
-})
+  textInput.focus();
+});

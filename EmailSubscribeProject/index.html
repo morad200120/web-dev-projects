@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Email Subscribe Project</title>
-</head>
+  </head>
 
-<body class="h-screen flex items-center justify-center bg-[#3f3f46]">
+  <body class="h-screen flex items-center justify-center bg-[#3f3f46]">
     <div
-        class="bg-[#27272a] rounded-2xl flex flex-col md:flex-row overflow-hidden max-w-lg md:max-w-2xl w-[90%] md:w-auto">
-        <div class="w-full md:w-1/4">
-            <img class="w-full h-full object-cover py-2 pl-2 rounded-l-3xl"
-                src="/EmailSubscribeProject/EmailSubscribeProject-Images/insalata.jpg" alt="">
+      class="bg-[#27272a] rounded-2xl flex flex-col md:flex-row overflow-hidden max-w-lg md:max-w-2xl w-[90%] md:w-auto"
+    >
+      <div class="w-full md:w-1/4">
+        <img
+          class="w-full h-full object-cover py-2 pl-2 rounded-l-3xl"
+          src="/EmailSubscribeProject/EmailSubscribeProject-Images/insalata.jpg"
+          alt=""
+        />
+      </div>
+      <div
+        class="w-full md:w-3/4 flex flex-col justify-center gap-6 p-4 md:p-6"
+      >
+        <p class="text-white text-xl">
+          Get diet and fitness tips in your inbox
+        </p>
+        <p class="text-white text-sm">
+          Eat better and exercise better. Sign up for the<br />Diet&Fitness
+          newsletter.
+        </p>
+        <div class="flex flex-col md:flex-row gap-3">
+          <input
+            class="bg-transparent w-full md:w-60 py-3 px-3 rounded-sm border border-[#47474e] text-white"
+            type="email"
+            placeholder="Enter your email address"
+          />
+          <button
+            class="bg-[#84cc16] text-black py-3 px-4 rounded-sm"
+            type="submit"
+          >
+            Subscribe
+          </button>
         </div>
-        <div class="w-full md:w-3/4 flex flex-col justify-center gap-6 p-4 md:p-6">
-            <p class="text-white text-xl">Get diet and fitness tips in your inbox</p>
-            <p class="text-white text-sm">Eat better and exercise better. Sign up for the<br>Diet&Fitness newsletter.
-            </p>
-            <div class="flex flex-col md:flex-row gap-3">
-                <input class="bg-transparent w-full md:w-60 py-3 px-3 rounded-sm border border-[#47474e] text-white"
-                    type="email" placeholder="Enter your email address">
-                <button class="bg-[#84cc16] text-black py-3 px-4 rounded-sm" type="submit">Subscribe</button>
-            </div>
-        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
