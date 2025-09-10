@@ -1,5 +1,5 @@
 /* CSS personalizzato per animazioni e effetti */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 .card-hover {
   transition: all 0.3s ease;
