@@ -14,6 +14,8 @@ const checkInput = (userInput, regex) => {
   const match = userInput.match(regex);
   const paragraph = document.createElement('p');
 
+  paragraph.classList.add('font-[Geist]');
+
   match
     ? (paragraph.textContent = `Valid US number: ${userInput.trim()}`)
     : (paragraph.textContent = `Invalid US number: ${userInput.trim()}`);
