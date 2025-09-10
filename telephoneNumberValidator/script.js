@@ -7,26 +7,26 @@ const resultsDiv = document.getElementById('results-div');
 const regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?(\d{3})[\s\-]?(\d{4})$/;
 
 const addElement = (element, place) => {
-    place.appendChild(element);
+  place.appendChild(element);
 };
 
 const checkInput = (userInput, regex) => {
-    const match = userInput.match(regex);
-    const paragraph = document.createElement('p');
+  const match = userInput.match(regex);
+  const paragraph = document.createElement('p');
 
-    match
-        ? (paragraph.textContent = `Valid US number: ${userInput.trim()}`)
-        : (paragraph.textContent = `Invalid US number: ${userInput.trim()}`);
+  match
+    ? (paragraph.textContent = `Valid US number: ${userInput.trim()}`)
+    : (paragraph.textContent = `Invalid US number: ${userInput.trim()}`);
 
-    addElement(paragraph, resultsDiv);
+  addElement(paragraph, resultsDiv);
 };
 
 checkButton.addEventListener('click', () => {
-    userInput.value
-        ? checkInput(userInput.value, regex)
-        : alert('Please provide a phone number');
+  userInput.value
+    ? checkInput(userInput.value, regex)
+    : alert('Please provide a phone number');
 });
 
 clearButton.addEventListener('click', () => {
-    resultsDiv.innerHTML = '';
+  resultsDiv.innerHTML = '';
 });
