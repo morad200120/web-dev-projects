@@ -1,0 +1,142 @@
+@import 'tailwindcss';
+
+.mystical-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(0.12 0.1 285) 0%,
+    oklch(0.18 0.08 300) 25%,
+    oklch(0.15 0.12 270) 50%,
+    oklch(0.2 0.06 285) 75%,
+    oklch(0.12 0.1 285) 100%
+  );
+}
+
+/* Adding responsive animations and mystical effects with proper z-index layering */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(236, 72, 153, 0.6);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.mystical-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(236, 72, 153, 0.8) 0%,
+    transparent 70%
+  );
+  animation: float 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* Adding responsive design improvements */
+@media (max-width: 768px) {
+  .mystical-particle {
+    display: none;
+  }
+
+  .sparkle,
+  .float {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .sparkle,
+  .float {
+    font-size: 0.6em;
+  }
+}
+
+/* Enhanced input focus effects */
+input:focus {
+  box-shadow: 0 0 15px rgba(121, 83, 146, 0.4);
+  background: rgba(26, 23, 61, 0.9);
+}
+
+/* Adding proper input styling with backdrop blur */
+input {
+  background: rgba(26, 23, 61, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+/* Enhanced button hover effects */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgba(121, 83, 146, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(121, 83, 146, 0.4);
+}
+
+/* Creature card styling */
+.creature-card {
+  background: linear-gradient(
+    145deg,
+    rgba(26, 23, 61, 0.8) 0%,
+    rgba(68, 65, 113, 0.3) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(121, 83, 146, 0.3);
+}
+
+.creature-stat {
+  background: rgba(121, 83, 146, 0.2);
+  border: 1px solid rgba(121, 83, 146, 0.4);
+}
