@@ -36,6 +36,33 @@
         },
       };
     </script>
+    <style>
+      .sparkle {
+        animation: sparkle 2s infinite alternate;
+      }
+      @keyframes sparkle {
+        0% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+      }
+      .mystical-gradient {
+        background: linear-gradient(
+          135deg,
+          #1a173d 0%,
+          #4a3f7a 50%,
+          #795392 100%
+        );
+      }
+    </style>
   </head>
 
   <body
@@ -182,6 +209,99 @@
         <div
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
         >
+          <!-- RPG Creature Search App card -->
+          <a
+            href="/RpgCreatureSearchApp/index.html"
+            class="block rounded-lg overflow-hidden shadow-lg card-hover border border-gray-200 dark:border-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          >
+            <div class="h-48 overflow-hidden relative">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"
+              ></div>
+              <div
+                class="mystical-gradient h-full w-full flex items-center justify-center p-4 relative"
+              >
+                Mystical sparkles
+                <div
+                  class="absolute top-2 left-2 text-pink-300 text-sm sparkle"
+                >
+                  ✦
+                </div>
+                <div
+                  class="absolute top-4 right-4 text-purple-300 text-xs sparkle"
+                  style="animation-delay: 0.5s"
+                >
+                  ✧
+                </div>
+                <div
+                  class="absolute bottom-3 left-4 text-violet-300 text-sm sparkle"
+                  style="animation-delay: 1s"
+                >
+                  ✨
+                </div>
+                <div
+                  class="absolute bottom-2 right-2 text-fuchsia-300 text-xs sparkle"
+                  style="animation-delay: 1.5s"
+                >
+                  ⭐
+                </div>
+
+                <div
+                  class="w-full max-w-xs bg-[#1a173d]/80 backdrop-blur-sm rounded-xl p-4 border border-[#444171]"
+                >
+                  Header
+                  <div class="text-center mb-3">
+                    <div
+                      class="h-4 w-3/4 bg-[#D78DE8] rounded mb-2 mx-auto"
+                    ></div>
+                    <div class="h-3 w-1/2 bg-[#BEABC5] rounded mx-auto"></div>
+                  </div>
+
+                  Search section
+                  <div class="space-y-2 mb-3">
+                    <div
+                      class="h-8 w-full bg-[#201E4B] rounded-xl border border-[#444171]"
+                    ></div>
+                    <div class="h-8 w-full bg-[#795392] rounded-xl"></div>
+                  </div>
+
+                  Results preview
+                  <div class="bg-[#18153C] rounded-lg p-2">
+                    <div class="flex justify-between items-center mb-2">
+                      <div class="h-3 w-16 bg-[#D78DE8] rounded"></div>
+                      <div class="h-2 w-6 bg-gray-400 rounded"></div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-1">
+                      <div class="h-4 w-full bg-[#201E4B] rounded"></div>
+                      <div class="h-4 w-full bg-[#201E4B] rounded"></div>
+                      <div class="h-4 w-full bg-[#201E4B] rounded"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3
+                class="text-xl font-semibold mb-2 text-gray-900 dark:text-white"
+              >
+                RPG Creature Search
+              </h3>
+              <p class="mb-4 text-gray-600 dark:text-gray-400">
+                App mistica per cercare creature leggendarie con statistiche
+                dettagliate e design fantasy immersivo.
+              </p>
+              <div class="flex justify-between items-center">
+                <span
+                  class="text-xs px-2 py-1 rounded text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800"
+                >
+                  Fantasy App
+                </span>
+                <span class="text-purple-500">
+                  <i class="fas fa-dragon"></i>
+                </span>
+              </div>
+            </div>
+          </a>
           <!-- Cash Register Card -->
           <a
             href="/CashRegistrerProject/index.html"

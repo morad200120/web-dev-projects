@@ -1,294 +1,92 @@
-// Creature database with exact specifications
-const creatures = {
-    'pyrolynx': {
-        name: 'PYROLYNX',
-        id: 1,
-        weight: 42,
-        height: 32,
-        types: ['FIRE'],
-        hp: 65,
-        attack: 80,
-        defense: 50,
-        specialAttack: 90,
-        specialDefense: 55,
-        speed: 100
-    },
-    '1': {
-        name: 'PYROLYNX',
-        id: 1,
-        weight: 42,
-        height: 32,
-        types: ['FIRE'],
-        hp: 65,
-        attack: 80,
-        defense: 50,
-        specialAttack: 90,
-        specialDefense: 55,
-        speed: 100
-    },
-    'aquoroc': {
-        name: 'AQUOROC',
-        id: 2,
-        weight: 220,
-        height: 53,
-        types: ['WATER', 'ROCK'],
-        hp: 85,
-        attack: 90,
-        defense: 120,
-        specialAttack: 60,
-        specialDefense: 70,
-        speed: 40
-    },
-    '2': {
-        name: 'AQUOROC',
-        id: 2,
-        weight: 220,
-        height: 53,
-        types: ['WATER', 'ROCK'],
-        hp: 85,
-        attack: 90,
-        defense: 120,
-        specialAttack: 60,
-        specialDefense: 70,
-        speed: 40
-    },
-    'verdantis': {
-        name: 'VERDANTIS',
-        id: 3,
-        weight: 180,
-        height: 95,
-        types: ['GRASS', 'FAIRY'],
-        hp: 78,
-        attack: 65,
-        defense: 85,
-        specialAttack: 105,
-        specialDefense: 95,
-        speed: 72
-    },
-    '3': {
-        name: 'VERDANTIS',
-        id: 3,
-        weight: 180,
-        height: 95,
-        types: ['GRASS', 'FAIRY'],
-        hp: 78,
-        attack: 65,
-        defense: 85,
-        specialAttack: 105,
-        specialDefense: 95,
-        speed: 72
-    },
-    'stormwing': {
-        name: 'STORMWING',
-        id: 4,
-        weight: 75,
-        height: 140,
-        types: ['ELECTRIC', 'FLYING'],
-        hp: 70,
-        attack: 85,
-        defense: 60,
-        specialAttack: 115,
-        specialDefense: 70,
-        speed: 130
-    },
-    '4': {
-        name: 'STORMWING',
-        id: 4,
-        weight: 75,
-        height: 140,
-        types: ['ELECTRIC', 'FLYING'],
-        hp: 70,
-        attack: 85,
-        defense: 60,
-        specialAttack: 115,
-        specialDefense: 70,
-        speed: 130
-    },
-    'glacihorn': {
-        name: 'GLACIHORN',
-        id: 5,
-        weight: 320,
-        height: 68,
-        types: ['ICE', 'GROUND'],
-        hp: 95,
-        attack: 110,
-        defense: 130,
-        specialAttack: 45,
-        specialDefense: 80,
-        speed: 40
-    },
-    '5': {
-        name: 'GLACIHORN',
-        id: 5,
-        weight: 320,
-        height: 68,
-        types: ['ICE', 'GROUND'],
-        hp: 95,
-        attack: 110,
-        defense: 130,
-        specialAttack: 45,
-        specialDefense: 80,
-        speed: 40
-    },
-    'shadowmist': {
-        name: 'SHADOWMIST',
-        id: 6,
-        weight: 12,
-        height: 85,
-        types: ['GHOST', 'DARK'],
-        hp: 60,
-        attack: 70,
-        defense: 55,
-        specialAttack: 125,
-        specialDefense: 90,
-        speed: 110
-    },
-    '6': {
-        name: 'SHADOWMIST',
-        id: 6,
-        weight: 12,
-        height: 85,
-        types: ['GHOST', 'DARK'],
-        hp: 60,
-        attack: 70,
-        defense: 55,
-        specialAttack: 125,
-        specialDefense: 90,
-        speed: 110
-    },
-    'crystalwyrm': {
-        name: 'CRYSTALWYRM',
-        id: 7,
-        weight: 450,
-        height: 200,
-        types: ['DRAGON', 'STEEL'],
-        hp: 110,
-        attack: 130,
-        defense: 120,
-        specialAttack: 100,
-        specialDefense: 100,
-        speed: 80
-    },
-    '7': {
-        name: 'CRYSTALWYRM',
-        id: 7,
-        weight: 450,
-        height: 200,
-        types: ['DRAGON', 'STEEL'],
-        hp: 110,
-        attack: 130,
-        defense: 120,
-        specialAttack: 100,
-        specialDefense: 100,
-        speed: 80
-    },
-    'psymorph': {
-        name: 'PSYMORPH',
-        id: 8,
-        weight: 89,
-        height: 77,
-        types: ['PSYCHIC'],
-        hp: 85,
-        attack: 55,
-        defense: 75,
-        specialAttack: 135,
-        specialDefense: 105,
-        speed: 90
-    },
-    '8': {
-        name: 'PSYMORPH',
-        id: 8,
-        weight: 89,
-        height: 77,
-        types: ['PSYCHIC'],
-        hp: 85,
-        attack: 55,
-        defense: 75,
-        specialAttack: 135,
-        specialDefense: 105,
-        speed: 90
-    }
-};
+/*Buttons and API's*/
+const searchBtn = document.getElementById("search-button")
+const searchInput = document.getElementById("search-input")
+const apiUrl = "https://rpg-creature-api.freecodecamp.rocks/api/creature"
 
-// DOM elements
-const searchInput = document.getElementById('search-input');
-const searchButton = document.getElementById('search-button');
-const resultsSection = document.getElementById('results');
-const creatureName = document.getElementById('creature-name');
-const creatureId = document.getElementById('creature-id');
-const weight = document.getElementById('weight');
-const height = document.getElementById('height');
-const types = document.getElementById('types');
-const hp = document.getElementById('hp');
-const attack = document.getElementById('attack');
-const defense = document.getElementById('defense');
-const specialAttack = document.getElementById('special-attack');
-const specialDefense = document.getElementById('special-defense');
-const speed = document.getElementById('speed');
+const types = document.getElementById("types")
+const results = document.getElementById("results")
 
-// Search functionality
-function searchCreature() {
-    const query = searchInput.value.toLowerCase().trim();
+/*Creature Stats*/
+const creatureName = document.getElementById("creature-name")
+const creatureId = document.getElementById("creature-id")
+const creatureWeight = document.getElementById("weight")
+const creatureHeight = document.getElementById("height")
+const creatureHp = document.getElementById("hp")
+const creatureAttack = document.getElementById("attack")
+const creatureDefense = document.getElementById("defense")
+const creatureSpecialAttack = document.getElementById("special-attack")
+const creatureSpecialDefense = document.getElementById("special-defense")
+const creatureSpeed = document.getElementById("speed")
 
-    if (!query) {
-        alert('Creature not found');
-        return;
-    }
+const getFilledTypes = (creature) => {
+    let filledTypes = []
+    creature.types.forEach((typeObj) => {
+        const p = document.createElement("p")
+        p.classList.add("bg-[#352856]", "text-gray-400", "rounded-2xl", "px-3", "py-1")
+        // I types sono oggetti, quindi accedi al nome del tipo
+        p.textContent = typeObj.name.toUpperCase()
+        filledTypes.push(p)
+    })
+    return filledTypes
+}
 
-    const creature = creatures[query];
+const displayStats = (creature) => {
+    // Pulisci i tipi precedenti
+    types.innerHTML = ""
 
-    if (creature) {
-        displayCreature(creature);
-    } else {
-        alert('Creature not found');
+    const filledTypes = getFilledTypes(creature)
+    filledTypes.forEach(filledType => {
+        types.appendChild(filledType)
+    })
+
+    // Mostra le statistiche della creatura
+    creatureName.textContent = creature.name.toUpperCase()
+    creatureId.textContent = `#${creature.id}`
+    creatureWeight.textContent = `Weight: ${creature.weight}`
+    creatureHeight.textContent = `Height: ${creature.height}`
+
+    // Gli stats sono oggetti con base_stat
+    creatureHp.textContent = creature.stats[0].base_stat
+    creatureAttack.textContent = creature.stats[1].base_stat
+    creatureDefense.textContent = creature.stats[2].base_stat
+    creatureSpecialAttack.textContent = creature.stats[3].base_stat
+    creatureSpecialDefense.textContent = creature.stats[4].base_stat
+    creatureSpeed.textContent = creature.stats[5].base_stat
+
+    results.classList.remove("hidden")
+}
+
+const getCreature = async () => {
+    try {
+        const searchValue = searchInput.value.trim()
+        if (!searchValue) {
+            alert("Please enter a creature name or ID")
+            return
+        }
+
+        const response = await fetch(`${apiUrl}/${searchValue}`)
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+        }
+
+        const data = await response.json()
+        console.log(data)
+        displayStats(data)
+    } catch (error) {
+        console.error('Error fetching creature:', error)
+        alert("Creature not found")
+        results.classList.add("hidden")
     }
 }
 
-// Display creature information
-function displayCreature(creature) {
-    creatureName.textContent = creature.name;
-    creatureId.textContent = `#${creature.id}`;
-    weight.textContent = `Weight: ${creature.weight}`;
-    height.textContent = `Height: ${creature.height}`;
-    hp.textContent = creature.hp;
-    attack.textContent = creature.attack;
-    defense.textContent = creature.defense;
-    specialAttack.textContent = creature.specialAttack;
-    specialDefense.textContent = creature.specialDefense;
-    speed.textContent = creature.speed;
+searchBtn.addEventListener("click", () => {
+    getCreature()
+})
 
-    // Clear types and add new ones
-    types.innerHTML = '';
-    creature.types.forEach(type => {
-        const typeElement = document.createElement('span');
-        typeElement.textContent = type;
-        typeElement.className = 'px-3 py-1 bg-[#795392] text-[#130d32] rounded-full text-sm font-medium';
-        types.appendChild(typeElement);
-    });
-
-    resultsSection.classList.remove('hidden');
-    resultsSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-// Event listeners
-searchButton.addEventListener('click', searchCreature);
-
-searchInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        searchCreature();
+// Listener per il tasto Enter
+searchInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        getCreature()
     }
-});
-
-// Button hover effects
-searchButton.addEventListener('mouseenter', function () {
-    this.style.transform = 'scale(1.05)';
-});
-
-searchButton.addEventListener('mouseleave', function () {
-    this.style.transform = 'scale(1)';
-});
-
-// Initialize with welcome message
-window.addEventListener('load', () => {
-    resultsSection.classList.add('hidden');
-});
+})
