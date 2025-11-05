@@ -1,25 +1,30 @@
 {
-  "name": "blog",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:css\"",
-    "dev:server": "nodemon app.js",
-    "dev:css": "tailwindcss --input ./src/input.css --output ./public/css/style.css --watch",
-    "build": "tailwindcss --input ./src/input.css --output ./public/css/style.css",
-    "start": "node app.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^9.2.1",
-    "nodemon": "^3.1.10",
-    "tailwindcss": "^4.1.16"
-  },
-  "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^5.1.0"
-  }
+	"name": "blog",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"dev": "concurrently \"npm run dev:server\" \"npm run dev:css\"",
+		"dev:server": "nodemon app.js",
+		"dev:css": "tailwindcss --input ./src/input.css --output ./public/css/style.css --watch",
+		"build": "tailwindcss --input ./src/input.css --output ./public/css/style.css",
+		"start": "node app.js",
+		"format": "biome format --write",
+		"lint": "biome lint --write",
+		"check": "biome check --write"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@biomejs/biome": "2.3.4",
+		"@tailwindcss/cli": "^4.1.16",
+		"concurrently": "^9.2.1",
+		"nodemon": "^3.1.10",
+		"tailwindcss": "^4.1.16"
+	},
+	"dependencies": {
+		"ejs": "^3.1.10",
+		"express": "^5.1.0"
+	}
 }
